@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "ethereal_nether:block/tainted_stem_top",
+    "side": "ethereal_nether:block/tainted_stem"
+  }
+}

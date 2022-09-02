@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "ethereal_nether:block/sanguinated_stem",
+    "side": "ethereal_nether:block/sanguinated_stem"
+  }
+}

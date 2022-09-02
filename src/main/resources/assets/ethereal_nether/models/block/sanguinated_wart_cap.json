@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_single_face",
+  "textures": {
+    "texture": "ethereal_nether:block/sanguinated_wart_cap"
+  }
+}

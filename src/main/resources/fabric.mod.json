@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "ethereal_nether",
+  "version": "${version}",
+
+  "name": "Ethereal Nether",
+  "description": "An expansion of the nether's fauna.",
+  "authors": [
+    "DigitalPear",
+    "Tamakii"
+  ],
+  "contact": {},
+
+  "license": "MIT",
+  "icon": "assets/ethereal_nether/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.digitalpear.ethereal_nether.client.EtherealNetherClient"
+    ],
+    "main": [
+      "net.digitalpear.ethereal_nether.EtherealNether"
+    ],
+    "fabric-datagen": [
+      "net.digitalpear.ethereal_nether.EtherealNetherDatagen"
+    ]
+  },
+
+          "mixins": [
+        "ethereal_nether.mixins.json"
+      ],
+    
+  "depends": {
+    "fabricloader": ">=0.14.9",
+              "fabric": "*",
+          "minecraft": "1.19.2"
+  }
+}

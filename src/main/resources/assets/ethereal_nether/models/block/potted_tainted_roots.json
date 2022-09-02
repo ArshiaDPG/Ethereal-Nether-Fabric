@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/flower_pot_cross",
+  "textures": {
+    "plant": "ethereal_nether:block/tainted_roots_pot"
+  }
+}

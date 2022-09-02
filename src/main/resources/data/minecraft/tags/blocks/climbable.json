@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ethereal_nether:corrupting_vines",
+    "ethereal_nether:corrupting_vines_plant",
+    "ethereal_nether:bleeding_vines",
+    "ethereal_nether:bleeding_vines_plant"
+  ]
+}

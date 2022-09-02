@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_right",
+  "textures": {
+    "top": "ethereal_nether:block/sanguinated_door_top",
+    "bottom": "ethereal_nether:block/sanguinated_door_bottom"
+  }
+}

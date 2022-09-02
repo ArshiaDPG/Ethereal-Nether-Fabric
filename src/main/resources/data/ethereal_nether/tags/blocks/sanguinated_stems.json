@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ethereal_nether:sanguinated_stem",
+    "ethereal_nether:sanguinated_hyphae",
+    "ethereal_nether:stripped_sanguinated_stem",
+    "ethereal_nether:stripped_sanguinated_hyphae"
+  ]
+}

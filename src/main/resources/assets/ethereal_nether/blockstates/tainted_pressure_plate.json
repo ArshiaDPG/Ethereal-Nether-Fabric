@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "ethereal_nether:block/tainted_pressure_plate"
+    },
+    "powered=true": {
+      "model": "ethereal_nether:block/tainted_pressure_plate_down"
+    }
+  }
+}

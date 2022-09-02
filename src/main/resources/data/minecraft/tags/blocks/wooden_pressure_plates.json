@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "ethereal_nether:tainted_pressure_plate",
+    "ethereal_nether:sanguinated_pressure_plate"
+  ]
+}

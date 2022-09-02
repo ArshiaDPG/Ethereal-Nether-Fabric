@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "ethereal_nether:block/sanguinated_stem",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "ethereal_nether:block/sanguinated_stem"
+    },
+    "axis=z": {
+      "model": "ethereal_nether:block/sanguinated_stem",
+      "x": 90
+    }
+  }
+}

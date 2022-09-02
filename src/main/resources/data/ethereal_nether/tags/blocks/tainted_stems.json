@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ethereal_nether:tainted_stem",
+    "ethereal_nether:tainted_hyphae",
+    "ethereal_nether:stripped_tainted_stem",
+    "ethereal_nether:stripped_tainted_hyphae"
+  ]
+}

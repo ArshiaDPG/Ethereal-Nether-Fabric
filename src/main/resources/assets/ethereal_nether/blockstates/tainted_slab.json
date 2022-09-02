@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ethereal_nether:block/tainted_slab"
+    },
+    "type=double": {
+      "model": "ethereal_nether:block/tainted_planks"
+    },
+    "type=top": {
+      "model": "ethereal_nether:block/tainted_slab_top"
+    }
+  }
+}
