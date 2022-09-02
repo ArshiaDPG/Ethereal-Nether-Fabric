@@ -1,10 +1,8 @@
 {
   "replace": false,
   "values": [
-    "ethereal_nether:tainted_wart_cap",
-    "ethereal_nether:spotted_tainted_wart_cap",
-    "ethereal_nether:sanguinated_wart_cap",
-    "ethereal_nether:spotted_sanguinated_wart_cap",
+    "#ethereal_nether:tainted_wart_caps",
+    "#ethereal_nether:sanguinated_wart_caps",
     "ethereal_nether:tainted_fungus",
     "ethereal_nether:sanguinated_fungus"
   ]

@@ -2,11 +2,13 @@ package net.digitalpear.ethereal_nether.init;
 
 import net.digitalpear.ethereal_nether.EtherealNether;
 import net.digitalpear.ethereal_nether.common.blocks.SoilNyliumBlock;
+import net.digitalpear.ethereal_nether.common.blocks.WartCapBlock;
 import net.digitalpear.ethereal_nether.init.sounds.ENBlockSoundGroups;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.registry.Registry;
@@ -71,16 +73,19 @@ public record ENWoodset(String name, MapColor topColor) {
     public static Block createTrapdoor(ENWoodset woodset){
         return createBlockWithItem(woodset.name()+ "_trapdoor", new TrapdoorBlock(AbstractBlock.Settings.copy(Blocks.WARPED_TRAPDOOR).mapColor(woodset.topColor())), ItemGroup.REDSTONE);
     }
-    public static Block createWartCap(ENWoodset woodset){
-        return createBlockWithItem(woodset.name() + "_wart_cap", new MushroomBlock(AbstractBlock.Settings.copy(Blocks.WARPED_WART_BLOCK).sounds(ENBlockSoundGroups.SOUL_WART).mapColor(woodset.topColor())), ItemGroup.DECORATIONS);
+    public static Block createWartCap(ENWoodset woodset, TagKey<Block> insiderBlocks){
+        return createBlockWithItem(woodset.name() + "_wart_cap", new WartCapBlock(insiderBlocks, AbstractBlock.Settings.copy(Blocks.WARPED_WART_BLOCK).sounds(ENBlockSoundGroups.SOUL_WART).mapColor(woodset.topColor())), ItemGroup.DECORATIONS);
     }
-    public static Block createSpottedWartCap(ENWoodset woodset){
-        return createBlockWithItem("spotted_" + woodset.name() + "_wart_cap", new MushroomBlock(AbstractBlock.Settings.copy(Blocks.WARPED_WART_BLOCK).sounds(ENBlockSoundGroups.SOUL_WART).mapColor(woodset.topColor()).luminance((state) -> 10)), ItemGroup.DECORATIONS);
+    public static Block createSpottedWartCap(ENWoodset woodset, TagKey<Block> insiderBlocks){
+        return createBlockWithItem("spotted_" + woodset.name() + "_wart_cap", new WartCapBlock(insiderBlocks, AbstractBlock.Settings.copy(Blocks.WARPED_WART_BLOCK).sounds(ENBlockSoundGroups.SOUL_WART).mapColor(woodset.topColor()).luminance((state) -> 10)), ItemGroup.DECORATIONS);
     }
     public static Block createFence(ENWoodset woodset){
         return createBlockWithItem(woodset.name()+ "_fence", new FenceBlock(AbstractBlock.Settings.copy(Blocks.WARPED_FENCE).mapColor(woodset.topColor())), ItemGroup.DECORATIONS);
     }
     public static Block createFenceGate(ENWoodset woodset){
         return createBlockWithItem(woodset.name()+ "_fence_gate", new FenceGateBlock(AbstractBlock.Settings.copy(Blocks.WARPED_FENCE_GATE).mapColor(woodset.topColor())), ItemGroup.REDSTONE);
+    }
+    public static Block createShroomlight(ENWoodset woodset){
+        return createBlockWithItem(woodset.name()+ "_shroomlight", new Block(AbstractBlock.Settings.copy(Blocks.SHROOMLIGHT).luminance((state) -> 10).mapColor(woodset.topColor())), ItemGroup.DECORATIONS);
     }
 }

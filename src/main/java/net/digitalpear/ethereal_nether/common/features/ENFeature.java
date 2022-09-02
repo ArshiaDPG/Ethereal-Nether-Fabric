@@ -8,7 +8,7 @@ import net.minecraft.world.gen.feature.HugeFungusFeature;
 import net.minecraft.world.gen.feature.HugeFungusFeatureConfig;
 
 public class ENFeature {
-    public static final Feature<HugeFungusFeatureConfig> HUGE_SOUL_FUNGUS = register("huge_soul_fungus", new HugeFungusFeature(HugeFungusFeatureConfig.CODEC));
+    public static final Feature<HugeSoulFungusFeatureConfig> HUGE_SOUL_FUNGUS = register("huge_soul_fungus", new HugeSoulFungusFeature(HugeSoulFungusFeatureConfig.CODEC));
 
 
     private static <C extends FeatureConfig, F extends Feature<C>> F register(String name, F feature) {

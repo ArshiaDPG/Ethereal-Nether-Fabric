@@ -2,39 +2,43 @@ package net.digitalpear.ethereal_nether.init;
 
 import net.digitalpear.ethereal_nether.EtherealNether;
 import net.digitalpear.ethereal_nether.common.features.ENFeature;
+import net.digitalpear.ethereal_nether.common.features.HugeSoulFungusFeatureConfig;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.FeatureConfig;
-import net.minecraft.world.gen.feature.HugeFungusFeatureConfig;
 
 
 public class ENConfiguredFeatures {
-    public static final RegistryEntry<ConfiguredFeature<HugeFungusFeatureConfig, ?>> TAINTED_FUNGUS = register("tainted_fungus",
-            ENFeature.HUGE_SOUL_FUNGUS, new HugeFungusFeatureConfig(
+    public static final RegistryEntry<ConfiguredFeature<HugeSoulFungusFeatureConfig, ?>> TAINTED_FUNGUS = register("tainted_fungus",
+            ENFeature.HUGE_SOUL_FUNGUS, new HugeSoulFungusFeatureConfig(
                     ENBlocks.TAINTED_NYLIUM.getDefaultState(),
                     ENBlocks.TAINTED_STEM.getDefaultState(),
                     ENBlocks.TAINTED_WART_CAP.getDefaultState(),
+                    ENBlocks.SPOTTED_TAINTED_WART_CAP.getDefaultState(),
                     ENBlocks.SPOTTED_TAINTED_WART_CAP.getDefaultState(), false));
-    public static final RegistryEntry<ConfiguredFeature<HugeFungusFeatureConfig, ?>> TAINTED_FUNGUS_PLANTED = register("tainted_fungus_planted",
-            ENFeature.HUGE_SOUL_FUNGUS, new HugeFungusFeatureConfig(
+    public static final RegistryEntry<ConfiguredFeature<HugeSoulFungusFeatureConfig, ?>> TAINTED_FUNGUS_PLANTED = register("tainted_fungus_planted",
+            ENFeature.HUGE_SOUL_FUNGUS, new HugeSoulFungusFeatureConfig(
                     ENBlocks.TAINTED_NYLIUM.getDefaultState(),
                     ENBlocks.TAINTED_STEM.getDefaultState(),
                     ENBlocks.TAINTED_WART_CAP.getDefaultState(),
+                    ENBlocks.SPOTTED_TAINTED_WART_CAP.getDefaultState(),
                     ENBlocks.SPOTTED_TAINTED_WART_CAP.getDefaultState(), true));
 
-    public static final RegistryEntry<ConfiguredFeature<HugeFungusFeatureConfig, ?>> SANGUINATED_FUNGUS = register("sanguinated_fungus",
-            ENFeature.HUGE_SOUL_FUNGUS, new HugeFungusFeatureConfig(
+    public static final RegistryEntry<ConfiguredFeature<HugeSoulFungusFeatureConfig, ?>> SANGUINATED_FUNGUS = register("sanguinated_fungus",
+            ENFeature.HUGE_SOUL_FUNGUS, new HugeSoulFungusFeatureConfig(
                     ENBlocks.SANGUINATED_NYLIUM.getDefaultState(),
                     ENBlocks.SANGUINATED_STEM.getDefaultState(),
                     ENBlocks.SANGUINATED_WART_CAP.getDefaultState(),
+                    ENBlocks.SPOTTED_TAINTED_WART_CAP.getDefaultState(),
                     ENBlocks.SPOTTED_SANGUINATED_WART_CAP.getDefaultState(), false));
-    public static final RegistryEntry<ConfiguredFeature<HugeFungusFeatureConfig, ?>> SANGUINATED_FUNGUS_PLANTED = register("sanguinated_fungus_planted",
-            ENFeature.HUGE_SOUL_FUNGUS, new HugeFungusFeatureConfig(
+    public static final RegistryEntry<ConfiguredFeature<HugeSoulFungusFeatureConfig, ?>> SANGUINATED_FUNGUS_PLANTED = register("sanguinated_fungus_planted",
+            ENFeature.HUGE_SOUL_FUNGUS, new HugeSoulFungusFeatureConfig(
                     ENBlocks.SANGUINATED_NYLIUM.getDefaultState(),
                     ENBlocks.SANGUINATED_STEM.getDefaultState(),
                     ENBlocks.SANGUINATED_WART_CAP.getDefaultState(),
+                    ENBlocks.SPOTTED_TAINTED_WART_CAP.getDefaultState(),
                     ENBlocks.SPOTTED_SANGUINATED_WART_CAP.getDefaultState(), true));
 
 

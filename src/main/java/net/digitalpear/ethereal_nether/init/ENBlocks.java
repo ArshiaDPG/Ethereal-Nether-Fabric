@@ -2,11 +2,13 @@ package net.digitalpear.ethereal_nether.init;
 
 import net.digitalpear.ethereal_nether.EtherealNether;
 import net.digitalpear.ethereal_nether.common.blocks.SoilNyliumBlock;
+import net.digitalpear.ethereal_nether.common.blocks.SoulFungusBlock;
 import net.digitalpear.ethereal_nether.common.blocks.vines.BleedingVinesBlock;
 import net.digitalpear.ethereal_nether.common.blocks.vines.BleedingVinesPlantBlock;
 import net.digitalpear.ethereal_nether.common.blocks.vines.CorruptingVinesBlock;
 import net.digitalpear.ethereal_nether.common.blocks.vines.CorruptingVinesPlantBlock;
 import net.digitalpear.ethereal_nether.init.sounds.ENBlockSoundGroups;
+import net.digitalpear.ethereal_nether.init.tags.ENBlockTags;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -78,8 +80,8 @@ public class ENBlocks {
     public static final Block TAINTED_ROOTS = ENWoodset.createRoots(TAINTED);
     public static final Block POTTED_TAINTED_ROOTS = ENWoodset.createPottedRoots(TAINTED, TAINTED_ROOTS);
     public static final Block TAINTED_SPROUT = ENWoodset.createSprouts(TAINTED);
-    public static final Block TAINTED_WART_CAP = ENWoodset.createWartCap(TAINTED);
-    public static final Block SPOTTED_TAINTED_WART_CAP = ENWoodset.createSpottedWartCap(TAINTED);
+    public static final Block TAINTED_WART_CAP = ENWoodset.createWartCap(TAINTED, ENBlockTags.TAINTED_WART_CAPS);
+    public static final Block SPOTTED_TAINTED_WART_CAP = ENWoodset.createSpottedWartCap(TAINTED, ENBlockTags.TAINTED_WART_CAPS);
     public static final Block TAINTED_FENCE = ENWoodset.createFence(TAINTED);
     public static final Block TAINTED_FENCE_GATE = ENWoodset.createFenceGate(TAINTED);
 
@@ -101,17 +103,19 @@ public class ENBlocks {
     public static final Block SANGUINATED_ROOTS = ENWoodset.createRoots(SANGUINATED);
     public static final Block POTTED_SANGUINATED_ROOTS = ENWoodset.createPottedRoots(SANGUINATED, SANGUINATED_ROOTS);
     public static final Block SANGUINATED_SPROUT = ENWoodset.createSprouts(SANGUINATED);
-    public static final Block SANGUINATED_WART_CAP = ENWoodset.createWartCap(SANGUINATED);
-    public static final Block SPOTTED_SANGUINATED_WART_CAP = ENWoodset.createSpottedWartCap(SANGUINATED);
+    public static final Block SANGUINATED_WART_CAP = ENWoodset.createWartCap(SANGUINATED, ENBlockTags.SANGUINATED_WART_CAPS);
+    public static final Block SPOTTED_SANGUINATED_WART_CAP = ENWoodset.createSpottedWartCap(SANGUINATED, ENBlockTags.SANGUINATED_WART_CAPS);
     public static final Block SANGUINATED_FENCE = ENWoodset.createFence(SANGUINATED);
     public static final Block SANGUINATED_FENCE_GATE = ENWoodset.createFenceGate(SANGUINATED);
+    public static final Block SANGUINATED_SHROOMLIGHT = ENWoodset.createShroomlight(SANGUINATED);
+
 
     public static final Block TAINTED_FUNGUS = createBlockWithItem(TAINTED.name()+ "_fungus",
-            new FungusBlock(AbstractBlock.Settings.copy(Blocks.WARPED_FUNGUS).sounds(ENBlockSoundGroups.SOUL_FUNGUS).mapColor(TAINTED.topColor()),
+            new SoulFungusBlock(AbstractBlock.Settings.copy(Blocks.WARPED_FUNGUS).sounds(ENBlockSoundGroups.SOUL_FUNGUS).mapColor(TAINTED.topColor()),
                     () -> ENConfiguredFeatures.TAINTED_FUNGUS_PLANTED), ItemGroup.DECORATIONS);
 
     public static final Block SANGUINATED_FUNGUS = createBlockWithItem(SANGUINATED.name()+ "_fungus",
-            new FungusBlock(AbstractBlock.Settings.copy(Blocks.WARPED_FUNGUS).sounds(ENBlockSoundGroups.SOUL_FUNGUS).mapColor(SANGUINATED.topColor()),
+            new SoulFungusBlock(AbstractBlock.Settings.copy(Blocks.WARPED_FUNGUS).sounds(ENBlockSoundGroups.SOUL_FUNGUS).mapColor(SANGUINATED.topColor()),
                     () -> ENConfiguredFeatures.SANGUINATED_FUNGUS_PLANTED), ItemGroup.DECORATIONS);
 
     public static final Block BLEEDING_VINES = createBlockWithItem("bleeding_vines", new BleedingVinesBlock(AbstractBlock.Settings.of(Material.PLANT, TAINTED.topColor()).ticksRandomly().noCollision().breakInstantly().sounds(BlockSoundGroup.WEEPING_VINES)), ItemGroup.DECORATIONS);

@@ -1,5 +1,6 @@
 package net.digitalpear.ethereal_nether.common.blocks;
 
+import net.digitalpear.ethereal_nether.common.features.HugeSoulFungusFeatureConfig;
 import net.minecraft.block.*;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.tag.BlockTags;
@@ -17,9 +18,9 @@ import java.util.function.Supplier;
 public class SoulFungusBlock extends PlantBlock implements Fertilizable {
     protected static final VoxelShape SHAPE = Block.createCuboidShape(4.0D, 0.0D, 4.0D, 12.0D, 9.0D, 12.0D);
     private static final double GROW_CHANCE = 0.4D;
-    private final Supplier<RegistryEntry<ConfiguredFeature<HugeFungusFeatureConfig, ?>>> feature;
+    private final Supplier<RegistryEntry<ConfiguredFeature<HugeSoulFungusFeatureConfig, ?>>> feature;
 
-    public SoulFungusBlock(Settings settings, Supplier<RegistryEntry<ConfiguredFeature<HugeFungusFeatureConfig, ?>>> feature) {
+    public SoulFungusBlock(Settings settings, Supplier<RegistryEntry<ConfiguredFeature<HugeSoulFungusFeatureConfig, ?>>> feature) {
         super(settings);
         this.feature = feature;
     }
@@ -33,13 +34,13 @@ public class SoulFungusBlock extends PlantBlock implements Fertilizable {
     }
 
     public boolean isFertilizable(BlockView world, BlockPos pos, BlockState state, boolean isClient) {
-        Block block = ((HugeFungusFeatureConfig)((ConfiguredFeature)((RegistryEntry)this.feature.get()).value()).config()).validBaseBlock.getBlock();
+        Block block = ((HugeSoulFungusFeatureConfig)((ConfiguredFeature)((RegistryEntry)this.feature.get()).value()).config()).validBaseBlock.getBlock();
         BlockState blockState = world.getBlockState(pos.down());
         return blockState.isOf(block);
     }
 
     public boolean canGrow(World world, Random random, BlockPos pos, BlockState state) {
-        return (double)random.nextFloat() < 0.4D;
+        return (double)random.nextFloat() < GROW_CHANCE;
     }
 
     public void grow(ServerWorld world, Random random, BlockPos pos, BlockState state) {
