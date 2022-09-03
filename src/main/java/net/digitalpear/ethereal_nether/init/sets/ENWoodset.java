@@ -1,4 +1,4 @@
-package net.digitalpear.ethereal_nether.init;
+package net.digitalpear.ethereal_nether.init.sets;
 
 import net.digitalpear.ethereal_nether.EtherealNether;
 import net.digitalpear.ethereal_nether.common.blocks.SoilNyliumBlock;

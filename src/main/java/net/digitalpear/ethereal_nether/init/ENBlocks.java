@@ -3,10 +3,13 @@ package net.digitalpear.ethereal_nether.init;
 import net.digitalpear.ethereal_nether.EtherealNether;
 import net.digitalpear.ethereal_nether.common.blocks.SoilNyliumBlock;
 import net.digitalpear.ethereal_nether.common.blocks.SoulFungusBlock;
+import net.digitalpear.ethereal_nether.common.blocks.SoulGlassBlock;
 import net.digitalpear.ethereal_nether.common.blocks.vines.BleedingVinesBlock;
 import net.digitalpear.ethereal_nether.common.blocks.vines.BleedingVinesPlantBlock;
 import net.digitalpear.ethereal_nether.common.blocks.vines.CorruptingVinesBlock;
 import net.digitalpear.ethereal_nether.common.blocks.vines.CorruptingVinesPlantBlock;
+import net.digitalpear.ethereal_nether.init.sets.ENStones;
+import net.digitalpear.ethereal_nether.init.sets.ENWoodset;
 import net.digitalpear.ethereal_nether.init.sounds.ENBlockSoundGroups;
 import net.digitalpear.ethereal_nether.init.tags.ENBlockTags;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
@@ -124,6 +127,53 @@ public class ENBlocks {
     public static final Block CORRUPTING_VINES_PLANT = createBlockWithoutItem("corrupting_vines_plant", new CorruptingVinesPlantBlock(AbstractBlock.Settings.of(Material.PLANT, SANGUINATED.topColor()).noCollision().breakInstantly().sounds(BlockSoundGroup.WEEPING_VINES)));
 
 
+    public static final ENStones BLACKSTONE_MATERIAL = new ENStones("cobbled_blackstone", Blocks.BASALT.getDefaultMapColor(), AbstractBlock.Settings.copy(Blocks.BLACKSTONE));
+
+    public static final Block COBBLED_BLACKSTONE = ENStones.createCobbledBlock(BLACKSTONE_MATERIAL);
+    public static final Block COBBLED_BLACKSTONE_STAIRS_AND_SLAB = ENStones.createCobbledStairsAndSlab(BLACKSTONE_MATERIAL, COBBLED_BLACKSTONE);
+    public static final Block COBBLED_BLACKSTONE_WALL = ENStones.createStoneWallBlock(BLACKSTONE_MATERIAL);
+    public static final Block POLISHED_BLACKSTONE_PILLAR = createBlockWithItem("polished_blackstone_pillar", new PillarBlock(AbstractBlock.Settings.copy(Blocks.BLACKSTONE)), ItemGroup.BUILDING_BLOCKS);
+
+
+
+    public static final AbstractBlock.Settings BASALT_PROPERTIES = AbstractBlock.Settings.copy(Blocks.BASALT);
+    public static final ENStones COBBLED_BASALT_MATERIAL = new ENStones("cobbled_basalt", Blocks.BASALT.getDefaultMapColor(), BASALT_PROPERTIES);
+    public static final ENStones BASALT_MATERIAL = new ENStones("basalt", Blocks.BASALT.getDefaultMapColor(), BASALT_PROPERTIES);
+    public static final ENStones POLISHED_BASALT_MATERIAL = new ENStones("polished_basalt", Blocks.BASALT.getDefaultMapColor(), BASALT_PROPERTIES);
+    public static final ENStones POLISHED_BASALT_BRICK_MATERIAL = new ENStones("polished_basalt_brick", Blocks.BASALT.getDefaultMapColor(), BASALT_PROPERTIES);
+
+    public static final Block COBBLED_BASALT = ENStones.createCobbledBlock(COBBLED_BASALT_MATERIAL);
+    public static final Block COBBLED_BASALT_STAIRS_AND_SLAB = ENStones.createCobbledStairsAndSlab(COBBLED_BASALT_MATERIAL, COBBLED_BASALT);
+    public static final Block COBBLED_BASALT_WALL = ENStones.createStoneWallBlock(COBBLED_BASALT_MATERIAL);
+
+    public static final Block CHISELED_BASALT = ENStones.createChiseledBlock(BASALT_MATERIAL);
+
+    public static final Block POLISHED_BASALT = ENStones.createCobbledBlock(POLISHED_BASALT_MATERIAL);
+    public static final Block POLISHED_BASALT_STAIRS_AND_SLAB = ENStones.createCobbledStairsAndSlab(POLISHED_BASALT_MATERIAL, POLISHED_BASALT);
+    public static final Block POLISHED_BASALT_WALL = ENStones.createStoneWallBlock(POLISHED_BASALT_MATERIAL);
+
+    public static final Block POLISHED_BASALT_BRICKS = ENStones.createBricksBlock(POLISHED_BASALT_BRICK_MATERIAL);
+    public static final Block POLISHED_BASALT_BRICK_STAIRS_AND_SLAB = ENStones.createCobbledStairsAndSlab(POLISHED_BASALT_BRICK_MATERIAL, POLISHED_BASALT_BRICKS);
+    public static final Block POLISHED_BASALT_BRICK_WALL = ENStones.createStoneWallBlock(POLISHED_BASALT_BRICK_MATERIAL);
+
+
+    public static final Block SOUL_SANDSTONE = createBlockWithItem("soul_sandstone",
+            new Block(AbstractBlock.Settings.copy(Blocks.SANDSTONE)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block SOUL_SANDSTONE_STAIRS = createBlockWithItem("soul_sandstone_stairs",
+            new StairsBlock(SOUL_SANDSTONE.getDefaultState(), AbstractBlock.Settings.copy(Blocks.SANDSTONE)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block SOUL_SANDSTONE_SLAB = createBlockWithItem("soul_sandstone_slab",
+            new SlabBlock(AbstractBlock.Settings.copy(Blocks.SANDSTONE)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CUT_SOUL_SANDSTONE = createBlockWithItem("cut_soul_sandstone",
+            new Block(AbstractBlock.Settings.copy(Blocks.SANDSTONE)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CHISELED_SOUL_SANDSTONE = createBlockWithItem("chiseled_soul_sandstone",
+            new Block(AbstractBlock.Settings.copy(Blocks.SANDSTONE)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block SMOOTH_SOUL_SANDSTONE = createBlockWithItem("smooth_soul_sandstone",
+            new Block(AbstractBlock.Settings.copy(Blocks.SANDSTONE)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CHISELED_SOUL_SANDSTONE_LAMP = createBlockWithItem("chiseled_soul_sandstone_lamp",
+            new Block(AbstractBlock.Settings.copy(Blocks.SANDSTONE).luminance((state) -> 10)), ItemGroup.DECORATIONS);
+
+
+    public static final Block SOUL_GLASS = createBlockWithItem("soul_glass", new SoulGlassBlock(AbstractBlock.Settings.copy(Blocks.TINTED_GLASS)), ItemGroup.DECORATIONS);
 
     public static void init(){
         StrippableBlockRegistry.register(TAINTED_STEM, STRIPPED_TAINTED_STEM);
