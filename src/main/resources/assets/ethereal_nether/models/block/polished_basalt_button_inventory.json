@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/button_inventory",
   "textures": {
-    "texture": "minecraft:block/polished_basalt"
+    "texture": "minecraft:block/polished_basalt_top"
   }
 }
