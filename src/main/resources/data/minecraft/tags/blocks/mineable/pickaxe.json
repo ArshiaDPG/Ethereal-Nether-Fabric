@@ -1,8 +1,6 @@
 {
   "replace": false,
   "values": [
-    "#ethereal_nether:soul_nylium",
-    "ethereal_nether:soul_glass",
     "ethereal_nether:soul_sandstone",
     "ethereal_nether:soul_sandstone_stairs",
     "ethereal_nether:soul_sandstone_slab",

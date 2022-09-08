@@ -28,5 +28,7 @@ public class EtherealNetherClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ENBlocks.SANGUINATED_ROOTS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ENBlocks.POTTED_TAINTED_ROOTS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ENBlocks.POTTED_SANGUINATED_ROOTS, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ENBlocks.SOUL_GLASS, RenderLayer.getTranslucent());
     }
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "ethereal_nether:block/soul_sandstone_top",
+    "side": "ethereal_nether:block/chiseled_soul_sandstone_lamp"
+  }
+}

@@ -1,6 +1,17 @@
 {
   "replace": false,
   "values": [
-    "#ethereal_nether:soul_nylium"
+    "#ethereal_nether:soul_nylium",
+    "ethereal_nether:soul_glass",
+    "ethereal_nether:soul_sandstone",
+    "ethereal_nether:soul_sandstone_stairs",
+    "ethereal_nether:soul_sandstone_slab",
+    "ethereal_nether:chiseled_soul_sandstone",
+    "ethereal_nether:chiseled_soul_sandstone_lamp",
+    "ethereal_nether:cut_soul_sandstone",
+    "ethereal_nether:cut_soul_sandstone_slab",
+    "ethereal_nether:smooth_soul_sandstone",
+    "ethereal_nether:smooth_soul_sandstone_stairs",
+    "ethereal_nether:smooth_soul_sandstone_slab"
   ]
 }

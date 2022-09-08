@@ -32,6 +32,10 @@ public class ENTagGens extends FabricTagProvider<Item> {
 
     public static TagKey<Block> BLOCK_TAINTED_STEMS = createBlockTag("stainted_stems");
     public static TagKey<Item> ITEM_TAINTED_STEMS = createItemTag("stainted_stems");
+    public static final TagKey<Block> BLOCK_TAINTED_WART_CAPS = createBlockTag("tainted_wart_caps");
+    public static final TagKey<Block> BLOCK_SANGUINATED_WART_CAPS = createBlockTag("sanguinated_wart_caps");
+
+    public static TagKey<Block> BLOCK_SOUL_SANDSTONES = createBlockTag("soul_sandstones");
 
 
     @Override
@@ -42,5 +46,8 @@ public class ENTagGens extends FabricTagProvider<Item> {
                 .add(ENBlocks.STRIPPED_TAINTED_STEM.asItem())
                 .add(ENBlocks.TAINTED_HYPHAE.asItem())
                 .add(ENBlocks.STRIPPED_TAINTED_HYPHAE.asItem());
+
+
+
     }
 }

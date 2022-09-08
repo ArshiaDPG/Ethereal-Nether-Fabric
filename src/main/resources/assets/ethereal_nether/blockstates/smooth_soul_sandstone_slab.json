@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ethereal_nether:block/smooth_soul_sandstone_slab"
+    },
+    "type=double": {
+      "model": "ethereal_nether:block/smooth_soul_sandstone"
+    },
+    "type=top": {
+      "model": "ethereal_nether:block/smooth_soul_sandstone_slab_top"
+    }
+  }
+}
