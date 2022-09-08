@@ -64,6 +64,9 @@ public record ENetherWoodset(String name, MapColor topColor) {
     public static Block createPottedRoots(ENetherWoodset woodset, Block baseBlock){
         return createBlockWithoutItem("potted_"+ woodset.name()+ "_roots", new FlowerPotBlock(baseBlock, AbstractBlock.Settings.copy(Blocks.POTTED_WARPED_ROOTS).mapColor(woodset.topColor())));
     }
+    public static Block createPottedFungus(ENetherWoodset woodset, Block baseBlock){
+        return createBlockWithoutItem("potted_"+ woodset.name()+ "_fungus", new FlowerPotBlock(baseBlock, AbstractBlock.Settings.copy(Blocks.POTTED_WARPED_ROOTS).mapColor(woodset.topColor())));
+    }
     public static Block createSprouts(ENetherWoodset woodset){
         return createBlockWithItem(woodset.name()+ "_sprouts", new SproutsBlock(AbstractBlock.Settings.copy(Blocks.NETHER_SPROUTS).mapColor(woodset.topColor()).sounds(ENBlockSoundGroups.SOUL_SPROUTS)), ItemGroup.DECORATIONS);
     }

@@ -128,14 +128,15 @@ public class ENBlocks {
     public static final Block SANGUINATED_FENCE_GATE = ENetherWoodset.createFenceGate(SANGUINATED);
     public static final Block SANGUINATED_SHROOMLIGHT = ENetherWoodset.createShroomlight(SANGUINATED);
 
-
-    public static final Block TAINTED_FUNGUS = createBlockWithItem(TAINTED.name()+ "_fungus",
+    public static final Block TAINTED_FUNGUS = createBlockWithItem(TAINTED.name() + "_fungus",
             new SoulFungusBlock(AbstractBlock.Settings.copy(Blocks.WARPED_FUNGUS).sounds(ENBlockSoundGroups.SOUL_FUNGUS).mapColor(TAINTED.topColor()),
                     () -> ENConfiguredFeatures.TAINTED_FUNGUS_PLANTED), ItemGroup.DECORATIONS);
+    public static final Block POTTED_TAINTED_FUNGUS = ENetherWoodset.createPottedFungus(TAINTED, TAINTED_FUNGUS);
 
-    public static final Block SANGUINATED_FUNGUS = createBlockWithItem(SANGUINATED.name()+ "_fungus",
+    public static final Block SANGUINATED_FUNGUS = createBlockWithItem(SANGUINATED.name() + "_fungus",
             new SoulFungusBlock(AbstractBlock.Settings.copy(Blocks.WARPED_FUNGUS).sounds(ENBlockSoundGroups.SOUL_FUNGUS).mapColor(SANGUINATED.topColor()),
                     () -> ENConfiguredFeatures.SANGUINATED_FUNGUS_PLANTED), ItemGroup.DECORATIONS);
+    public static final Block POTTED_SANGUINATED_FUNGUS = ENetherWoodset.createPottedFungus(SANGUINATED, SANGUINATED_FUNGUS);
 
     public static final Block BLEEDING_VINES = createBlockWithItem("bleeding_vines", new BleedingVinesBlock(AbstractBlock.Settings.of(Material.PLANT, TAINTED.topColor()).ticksRandomly().noCollision().breakInstantly().sounds(BlockSoundGroup.WEEPING_VINES)), ItemGroup.DECORATIONS);
     public static final Block BLEEDING_VINES_PLANT = createBlockWithoutItem("bleeding_vines_plant", new BleedingVinesPlantBlock(AbstractBlock.Settings.of(Material.PLANT, TAINTED.topColor()).noCollision().breakInstantly().sounds(BlockSoundGroup.WEEPING_VINES)));
@@ -143,12 +144,10 @@ public class ENBlocks {
     public static final Block CORRUPTING_VINES_PLANT = createBlockWithoutItem("corrupting_vines_plant", new CorruptingVinesPlantBlock(AbstractBlock.Settings.of(Material.PLANT, SANGUINATED.topColor()).noCollision().breakInstantly().sounds(BlockSoundGroup.WEEPING_VINES)));
 
 
-
     public static final Block COBBLED_BLACKSTONE = createBlockWithItem("cobbled_blackstone", new Block(blackstoneMaterial()), ItemGroup.BUILDING_BLOCKS);
     public static final Block COBBLED_BLACKSTONE_STAIRS_AND_SLAB = createCobbledStairsAndSlab("cobbled_blackstone", blackstoneMaterial(), COBBLED_BLACKSTONE);
     public static final Block COBBLED_BLACKSTONE_WALL = createStoneWallBlock("cobbled_blackstone", blackstoneMaterial());
     public static final Block POLISHED_BLACKSTONE_PILLAR = createBlockWithItem("polished_blackstone_pillar", new PillarBlock(blackstoneMaterial()), ItemGroup.BUILDING_BLOCKS);
-
 
     public static final Block COBBLED_BASALT = createBlockWithItem("cobbled_basalt", new Block(basaltMaterial()), ItemGroup.BUILDING_BLOCKS);
     public static final Block COBBLED_BASALT_STAIRS_AND_SLAB = createCobbledStairsAndSlab("cobbled_basalt", basaltMaterial(), COBBLED_BASALT);
@@ -158,10 +157,10 @@ public class ENBlocks {
     public static final Block POLISHED_BASALT_STAIRS_AND_SLAB = createCobbledStairsAndSlab("polished_basalt", basaltMaterial(), POLISHED_BASALT);
     public static final Block POLISHED_BASALT_WALL = createStoneWallBlock("polished_basalt", basaltMaterial());
 
-
     public static final Block POLISHED_BASALT_BRICKS = createBlockWithItem("polished_basalt_bricks", new PillarBlock(basaltMaterial()), ItemGroup.BUILDING_BLOCKS);
     public static final Block POLISHED_BASALT_BRICK_STAIRS_AND_SLAB = createCobbledStairsAndSlab("polished_basalt_brick", basaltMaterial(), POLISHED_BASALT_BRICKS);
     public static final Block POLISHED_BASALT_BRICK_WALL = createStoneWallBlock("polished_basalt_brick", basaltMaterial());
+
 
 
     public static final Block SOUL_SANDSTONE = createBlockWithItem("soul_sandstone",
@@ -189,12 +188,44 @@ public class ENBlocks {
 
     public static final Block SOUL_GLASS = createBlockWithItem("soul_glass", new SoulGlassBlock(AbstractBlock.Settings.copy(Blocks.TINTED_GLASS)), ItemGroup.DECORATIONS);
 
+    /*
+        Nether Bricks
+     */
+    public static AbstractBlock.Settings netherBricks(){
+        return AbstractBlock.Settings.of(Material.STONE, MapColor.DARK_RED).requiresTool().strength(2.0F, 6.0F).sounds(BlockSoundGroup.NETHER_BRICKS);
+    }
     public static final Block NETHER_BRICK_PLATE = createBlockWithItem("nether_brick_plate", new Block(AbstractBlock.Settings.copy(Blocks.NETHER_BRICKS)), ItemGroup.BUILDING_BLOCKS);
     public static final Block NETHER_BRICK_PILLAR = createBlockWithItem("nether_brick_pillar", new PillarBlock(AbstractBlock.Settings.copy(Blocks.NETHER_BRICKS)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CUT_NETHER_BRICK_PLATE = createBlockWithItem("cut_nether_brick_plate", new Block(AbstractBlock.Settings.copy(Blocks.NETHER_BRICKS)), ItemGroup.BUILDING_BLOCKS);
+
+    public static final Block CRIMSON_NETHER_BRICK_PLATE = createBlockWithItem("crimson_nether_brick_plate", new Block(netherBricks().mapColor(MapColor.DARK_RED)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CRIMSON_NETHER_BRICK_PILLAR = createBlockWithItem("crimson_nether_brick_pillar", new PillarBlock(netherBricks().mapColor(MapColor.DARK_RED)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CUT_CRIMSON_NETHER_BRICK_PLATE = createBlockWithItem("cut_crimson_nether_brick_plate", new Block(netherBricks().mapColor(MapColor.DARK_RED)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CHISELED_CRIMSON_NETHER_BRICKS = createBlockWithItem("chiseled_crimson_nether_bricks", new Block(netherBricks().mapColor(MapColor.DARK_RED)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CRACKED_CRIMSON_NETHER_BRICKS = createBlockWithItem("cracked_crimson_nether_bricks", new Block(netherBricks().mapColor(MapColor.DARK_RED)), ItemGroup.BUILDING_BLOCKS);
+
+    public static final Block WARPED_NETHER_BRICK_PLATE = createBlockWithItem("warped_nether_brick_plate", new Block(netherBricks().mapColor(MapColor.DARK_AQUA)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block WARPED_NETHER_BRICK_PILLAR = createBlockWithItem("warped_nether_brick_pillar", new PillarBlock(netherBricks().mapColor(MapColor.DARK_AQUA)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CUT_WARPED_NETHER_BRICK_PLATE = createBlockWithItem("cut_warped_nether_brick_plate", new Block(netherBricks().mapColor(MapColor.DARK_AQUA)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CHISELED_WARPED_NETHER_BRICKS = createBlockWithItem("chiseled_warped_nether_bricks", new Block(netherBricks().mapColor(MapColor.DARK_AQUA)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CRACKED_WARPED_NETHER_BRICKS = createBlockWithItem("cracked_warped_nether_bricks", new Block(netherBricks().mapColor(MapColor.DARK_AQUA)), ItemGroup.BUILDING_BLOCKS);
 
     public static final Block NETHER_BRICK_FLOWER_POT = createBlockWithItem("nether_brick_flower_pot", new NetherBrickFlowerPotBlock(Blocks.AIR, AbstractBlock.Settings.copy(Blocks.FLOWER_POT).mapColor(Blocks.NETHER_BRICKS.getDefaultMapColor())), ItemGroup.DECORATIONS);
     public static final Block CRIMSON_NETHER_BRICK_FLOWER_POT = createBlockWithItem("crimson_nether_brick_flower_pot", new CrimsonNetherBrickFlowerPotBlock(Blocks.AIR, AbstractBlock.Settings.copy(Blocks.FLOWER_POT).mapColor(Blocks.RED_NETHER_BRICKS.getDefaultMapColor())), ItemGroup.DECORATIONS);
     public static final Block WARPED_NETHER_BRICK_FLOWER_POT = createBlockWithItem("warped_nether_brick_flower_pot", new WarpedNetherBrickFlowerPotBlock(Blocks.AIR, AbstractBlock.Settings.copy(Blocks.FLOWER_POT).mapColor(Blocks.WARPED_WART_BLOCK.getDefaultMapColor())), ItemGroup.DECORATIONS);
+
+
+
+    public static final Block POLISHED_OBSIDIAN = createBlockWithItem("polished_obsidian", new Block(AbstractBlock.Settings.copy(Blocks.OBSIDIAN)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block POLISHED_OBSIDIAN_BRICKS = createBlockWithItem("polished_obsidian_bricks", new Block(AbstractBlock.Settings.copy(Blocks.OBSIDIAN)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block POLISHED_OBSIDIAN_BRICK_STAIRS_AND_SLAB = createCobbledStairsAndSlab("polished_obsidian_brick", AbstractBlock.Settings.copy(Blocks.OBSIDIAN), POLISHED_OBSIDIAN_BRICKS);
+    public static final Block POLISHED_OBSIDIAN_BRICK_WALL = createStoneWallBlock("polished_obsidian_brick", AbstractBlock.Settings.copy(Blocks.OBSIDIAN));
+
+    public static final Block POLISHED_GLOWSTONE = createBlockWithItem("polished_glowstone", new Block(AbstractBlock.Settings.copy(Blocks.GLOWSTONE)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block POLISHED_GLOWSTONE_BRICKS = createBlockWithItem("polished_glowstone_bricks", new Block(AbstractBlock.Settings.copy(Blocks.GLOWSTONE)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block POLISHED_GLOWSTONE_BRICK_STAIRS_AND_SLAB = createCobbledStairsAndSlab("polished_glowstone_brick", AbstractBlock.Settings.copy(Blocks.GLOWSTONE), POLISHED_GLOWSTONE_BRICKS);
+    public static final Block POLISHED_GLOWSTONE_BRICK_WALL = createStoneWallBlock("polished_glowstone_brick", AbstractBlock.Settings.copy(Blocks.GLOWSTONE));
+
 
 
     public static Block createCobbledStairsAndSlab(String name, AbstractBlock.Settings properties, Block baseBlock){
