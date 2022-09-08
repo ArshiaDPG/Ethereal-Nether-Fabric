@@ -153,13 +153,14 @@ public class ENBlocks {
     public static final Block COBBLED_BASALT_STAIRS_AND_SLAB = createCobbledStairsAndSlab("cobbled_basalt", basaltMaterial(), COBBLED_BASALT);
     public static final Block COBBLED_BASALT_WALL = createStoneWallBlock("cobbled_basalt", basaltMaterial());
 
-    public static final Block POLISHED_BASALT = createBlockWithItem("polished_basalt", new Block(basaltMaterial()), ItemGroup.BUILDING_BLOCKS);
-    public static final Block POLISHED_BASALT_STAIRS_AND_SLAB = createCobbledStairsAndSlab("polished_basalt", basaltMaterial(), POLISHED_BASALT);
-    public static final Block POLISHED_BASALT_WALL = createStoneWallBlock("polished_basalt", basaltMaterial());
+    public static final Block POLISHED_BASALT_BUTTON = createBlockWithItem("polished_basalt_button", new StoneButtonBlock(basaltMaterial()), ItemGroup.REDSTONE);
+    public static final Block POLISHED_BASALT_PRESSURE_PLATE = createBlockWithItem("polished_basalt_pressure_plate", new StoneButtonBlock(basaltMaterial()), ItemGroup.REDSTONE);
+
 
     public static final Block POLISHED_BASALT_BRICKS = createBlockWithItem("polished_basalt_bricks", new PillarBlock(basaltMaterial()), ItemGroup.BUILDING_BLOCKS);
     public static final Block POLISHED_BASALT_BRICK_STAIRS_AND_SLAB = createCobbledStairsAndSlab("polished_basalt_brick", basaltMaterial(), POLISHED_BASALT_BRICKS);
     public static final Block POLISHED_BASALT_BRICK_WALL = createStoneWallBlock("polished_basalt_brick", basaltMaterial());
+    public static final Block CRACKED_POLISHED_BASALT_BRICKS = createBlockWithItem("cracked_polished_basalt_bricks", new PillarBlock(basaltMaterial()), ItemGroup.BUILDING_BLOCKS);
 
 
 
@@ -204,15 +205,15 @@ public class ENBlocks {
     public static final Block CHISELED_CRIMSON_NETHER_BRICKS = createBlockWithItem("chiseled_crimson_nether_bricks", new Block(netherBricks().mapColor(MapColor.DARK_RED)), ItemGroup.BUILDING_BLOCKS);
     public static final Block CRACKED_CRIMSON_NETHER_BRICKS = createBlockWithItem("cracked_crimson_nether_bricks", new Block(netherBricks().mapColor(MapColor.DARK_RED)), ItemGroup.BUILDING_BLOCKS);
 
-    public static final Block WARPED_NETHER_BRICK_PLATE = createBlockWithItem("warped_nether_brick_plate", new Block(netherBricks().mapColor(MapColor.DARK_AQUA)), ItemGroup.BUILDING_BLOCKS);
-    public static final Block WARPED_NETHER_BRICK_PILLAR = createBlockWithItem("warped_nether_brick_pillar", new PillarBlock(netherBricks().mapColor(MapColor.DARK_AQUA)), ItemGroup.BUILDING_BLOCKS);
-    public static final Block CUT_WARPED_NETHER_BRICK_PLATE = createBlockWithItem("cut_warped_nether_brick_plate", new Block(netherBricks().mapColor(MapColor.DARK_AQUA)), ItemGroup.BUILDING_BLOCKS);
-    public static final Block CHISELED_WARPED_NETHER_BRICKS = createBlockWithItem("chiseled_warped_nether_bricks", new Block(netherBricks().mapColor(MapColor.DARK_AQUA)), ItemGroup.BUILDING_BLOCKS);
-    public static final Block CRACKED_WARPED_NETHER_BRICKS = createBlockWithItem("cracked_warped_nether_bricks", new Block(netherBricks().mapColor(MapColor.DARK_AQUA)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block WARPED_NETHER_BRICK_PLATE = createBlockWithItem("warped_nether_brick_plate", new Block(netherBricks().mapColor(MapColor.BRIGHT_TEAL)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block WARPED_NETHER_BRICK_PILLAR = createBlockWithItem("warped_nether_brick_pillar", new PillarBlock(netherBricks().mapColor(MapColor.BRIGHT_TEAL)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CUT_WARPED_NETHER_BRICK_PLATE = createBlockWithItem("cut_warped_nether_brick_plate", new Block(netherBricks().mapColor(MapColor.BRIGHT_TEAL)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CHISELED_WARPED_NETHER_BRICKS = createBlockWithItem("chiseled_warped_nether_bricks", new Block(netherBricks().mapColor(MapColor.BRIGHT_TEAL)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CRACKED_WARPED_NETHER_BRICKS = createBlockWithItem("cracked_warped_nether_bricks", new Block(netherBricks().mapColor(MapColor.BRIGHT_TEAL)), ItemGroup.BUILDING_BLOCKS);
 
-    public static final Block NETHER_BRICK_FLOWER_POT = createBlockWithItem("nether_brick_flower_pot", new NetherBrickFlowerPotBlock(Blocks.AIR, AbstractBlock.Settings.copy(Blocks.FLOWER_POT).mapColor(Blocks.NETHER_BRICKS.getDefaultMapColor())), ItemGroup.DECORATIONS);
-    public static final Block CRIMSON_NETHER_BRICK_FLOWER_POT = createBlockWithItem("crimson_nether_brick_flower_pot", new CrimsonNetherBrickFlowerPotBlock(Blocks.AIR, AbstractBlock.Settings.copy(Blocks.FLOWER_POT).mapColor(Blocks.RED_NETHER_BRICKS.getDefaultMapColor())), ItemGroup.DECORATIONS);
-    public static final Block WARPED_NETHER_BRICK_FLOWER_POT = createBlockWithItem("warped_nether_brick_flower_pot", new WarpedNetherBrickFlowerPotBlock(Blocks.AIR, AbstractBlock.Settings.copy(Blocks.FLOWER_POT).mapColor(Blocks.WARPED_WART_BLOCK.getDefaultMapColor())), ItemGroup.DECORATIONS);
+    public static final Block NETHER_BRICK_FLOWER_POT = createBlockWithItem("nether_brick_flower_pot", new NetherBrickFlowerPotBlock(Blocks.AIR, AbstractBlock.Settings.copy(Blocks.FLOWER_POT).mapColor(MapColor.DARK_RED)), ItemGroup.DECORATIONS);
+    public static final Block CRIMSON_NETHER_BRICK_FLOWER_POT = createBlockWithItem("crimson_nether_brick_flower_pot", new CrimsonNetherBrickFlowerPotBlock(Blocks.AIR, AbstractBlock.Settings.copy(Blocks.FLOWER_POT).mapColor(MapColor.DARK_RED)), ItemGroup.DECORATIONS);
+    public static final Block WARPED_NETHER_BRICK_FLOWER_POT = createBlockWithItem("warped_nether_brick_flower_pot", new WarpedNetherBrickFlowerPotBlock(Blocks.AIR, AbstractBlock.Settings.copy(Blocks.FLOWER_POT).mapColor(MapColor.BRIGHT_TEAL)), ItemGroup.DECORATIONS);
 
 
 

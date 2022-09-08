@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "ethereal_nether:block/cobbled_blackstone"
+  }
+}

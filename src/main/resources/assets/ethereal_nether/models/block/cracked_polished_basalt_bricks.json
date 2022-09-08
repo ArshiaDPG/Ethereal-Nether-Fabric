@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "ethereal_nethert:block/polished_basalt_bricks_top",
+    "side": "ethereal_nethert:block/cracked_polished_basalt_bricks"
+  }
+}

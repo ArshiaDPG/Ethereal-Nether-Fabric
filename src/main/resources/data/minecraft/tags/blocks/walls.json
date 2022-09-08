@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ethereal_nether:cobbled_blackstone_wall",
+    "ethereal_nether:cobbled_basalt_wall",
+    "ethereal_nether:polished_basalt_brick_wall",
+    "ethereal_nether:soul_sandstone_wall"
+  ]
+}

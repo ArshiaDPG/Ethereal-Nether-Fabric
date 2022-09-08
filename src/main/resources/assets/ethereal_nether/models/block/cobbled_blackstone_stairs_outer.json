@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "ethereal_nether:block/cobbled_blackstone",
+    "top": "ethereal_nether:block/cobbled_blackstone",
+    "side": "ethereal_nether:block/cobbled_blackstone"
+  }
+}
