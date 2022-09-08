@@ -154,7 +154,8 @@ public class ENBlocks {
     public static final Block COBBLED_BASALT_WALL = createStoneWallBlock("cobbled_basalt", basaltMaterial());
 
     public static final Block POLISHED_BASALT_BUTTON = createBlockWithItem("polished_basalt_button", new StoneButtonBlock(basaltMaterial()), ItemGroup.REDSTONE);
-    public static final Block POLISHED_BASALT_PRESSURE_PLATE = createBlockWithItem("polished_basalt_pressure_plate", new StoneButtonBlock(basaltMaterial()), ItemGroup.REDSTONE);
+    public static final Block POLISHED_BASALT_PRESSURE_PLATE = createBlockWithItem("polished_basalt_pressure_plate", new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, basaltMaterial()), ItemGroup.REDSTONE);
+
 
 
     public static final Block POLISHED_BASALT_BRICKS = createBlockWithItem("polished_basalt_bricks", new PillarBlock(basaltMaterial()), ItemGroup.BUILDING_BLOCKS);
