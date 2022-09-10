@@ -256,6 +256,10 @@ public class ENBlocks {
                 createBlockWithoutItem("warped_nether_brick_" + block.getTranslationKey().split("\\.")[2],
                         new WarpedNetherBrickFlowerPotBlock(((FlowerPotBlock) block).getContent(), AbstractBlock.Settings.copy(WARPED_NETHER_BRICK_FLOWER_POT)));
             }
+
+            if (block.getTranslationKey().contains("blackstone")){
+                
+            }
         });
     }
 

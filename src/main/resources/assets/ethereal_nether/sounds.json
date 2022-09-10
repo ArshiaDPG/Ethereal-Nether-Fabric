@@ -1,5 +1,5 @@
 {
-  "soul_fungus_break": {
+  "block.ethereal_nether.soul_fungus_break": {
     "category": "block",
 	"subtitle": "subtitles.ethereal_nether.soul_fungus_break",
     "sounds": [
@@ -11,7 +11,7 @@
 	  "ethereal_nether:block/fungus/break6"
     ]
   },
-  "soil_nylium_break": {
+  "block.ethereal_nether.soil_nylium_break": {
     "category": "block",
 	"subtitle": "subtitles.ethereal_nether.soil_nylium_break",
     "sounds": [
@@ -23,7 +23,7 @@
 	  "ethereal_nether:block/nylium/break6"
     ]
   },
-  "soil_nylium_step": {
+  "block.ethereal_nether.soil_nylium_step": {
     "category": "block",
 	"subtitle": "subtitles.ethereal_nether.soil_nylium_step",
     "sounds": [
@@ -34,7 +34,7 @@
 	  "ethereal_nether:block/nylium/step5"
     ]
   },
-  "soul_roots_break": {
+  "block.ethereal_nether.soul_roots_break": {
     "category": "block",
 	"subtitle": "subtitles.ethereal_nether.soul_roots_break",
     "sounds": [
@@ -46,7 +46,7 @@
 	  "ethereal_nether:block/roots/break6"
     ]
   },
-  "soul_roots_step": {
+  "block.ethereal_nether.soul_roots_step": {
     "category": "block",
 	"subtitle": "subtitles.ethereal_nether.soul_roots_step",
     "sounds": [
@@ -57,7 +57,7 @@
 	  "ethereal_nether:block/roots/step5"
     ]
   },
-  "soul_shroomlight_break": {
+  "block.ethereal_nether.soul_shroomlight_break": {
     "category": "block",
 	"subtitle": "subtitles.ethereal_nether.soul_shroomlight_break",
     "sounds": [
@@ -68,7 +68,7 @@
 	  "ethereal_nether:block/shroomlight/break5"
     ]
   },
-  "soul_shroomlight_step": {
+  "block.ethereal_nether.soul_shroomlight_step": {
     "category": "block",
 	"subtitle": "subtitles.ethereal_nether.soul_shroomlight_step",
     "sounds": [
@@ -80,7 +80,7 @@
 	  "ethereal_nether:block/shroomlight/step6"
     ]
   },
-  "soul_sprouts_break": {
+  "block.ethereal_nether.soul_sprouts_break": {
     "category": "block",
 	"subtitle": "subtitles.ethereal_nether.soul_sprouts_break",
     "sounds": [
@@ -90,7 +90,7 @@
 	  "ethereal_nether:block/sprouts/break4"
     ]
   },
-  "soul_sprouts_step": {
+  "block.ethereal_nether.soul_sprouts_step": {
     "category": "block",
 	"subtitle": "subtitles.ethereal_nether.soul_sprouts_step",
     "sounds": [
@@ -101,7 +101,7 @@
 	  "ethereal_nether:block/sprouts/step5"
     ]
   },
-  "soul_stem_break": {
+  "block.ethereal_nether.soul_stem_break": {
     "category": "block",
 	"subtitle": "subtitles.ethereal_nether.soul_stem_break",
     "sounds": [
@@ -113,7 +113,7 @@
 	  "ethereal_nether:block/stem/break6"
     ]
   },
-  "soul_stem_step": {
+  "block.ethereal_nether.soul_stem_step": {
     "category": "block",
 	"subtitle": "subtitles.ethereal_nether.soul_stem_step",
     "sounds": [
@@ -125,7 +125,7 @@
 	  "ethereal_nether:block/stem/step6"
     ]
   },
-  "soul_wart_break": {
+  "block.ethereal_nether.soul_wart_break": {
     "category": "block",
 	"subtitle": "subtitles.ethereal_nether.soul_wart_break",
     "sounds": [
@@ -137,7 +137,7 @@
 	  "ethereal_nether:block/wart/break6"
     ]
   },
-  "soul_wart_step": {
+  "block.ethereal_nether.soul_wart_step": {
     "category": "block",
 	"subtitle": "subtitles.ethereal_nether.soul_wart_step",
     "sounds": [
