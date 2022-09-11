@@ -22,6 +22,13 @@ public class ENSoundEvents {
     public static final SoundEvent SOUL_WART_BREAK = createSound("block.ethereal_nether.soul_wart_break");
     public static final SoundEvent SOUL_WART_STEP = createSound("block.ethereal_nether.soul_wart_step");
 
+    public static final SoundEvent SOUL_GLASS_STEP = createSound("block.ethereal_nether.soul_glass_step");
+    public static final SoundEvent SOUL_GLASS_PLACE = createSound("block.ethereal_nether.soul_glass_place");
+    public static final SoundEvent SOUL_GLASS_BREAK = createSound("block.ethereal_nether.soul_glass_break");
+
+    public static final SoundEvent SOUL_SANDSTONE_STEP = createSound("block.ethereal_nether.soul_sandstone_step");
+    public static final SoundEvent SOUL_SANDSTONE_BREAK = createSound("block.ethereal_nether.soul_sandstone_break");
+
 
 
     public static SoundEvent createSound(String name){

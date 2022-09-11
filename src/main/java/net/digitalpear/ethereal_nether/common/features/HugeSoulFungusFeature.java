@@ -4,6 +4,7 @@ import com.mojang.serialization.Codec;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
@@ -19,14 +20,14 @@ public class HugeSoulFungusFeature extends Feature<HugeSoulFungusFeatureConfig> 
     @Override
     public boolean generate(FeatureContext<HugeSoulFungusFeatureConfig> context) {
         World world = context.getWorld().toServerWorld();
-        BlockPos startPos = world.getSpawnPos();
+        BlockPos startPos = context.getOrigin();
         BlockState stem = context.getConfig().stemState;
         BlockState validSpawn = context.getConfig().validBaseBlock;
         Random random = context.getRandom();
         BlockPos newPos;
 
 
-
+            newPos = startPos.up();
             for (int x = -1; x < 1; x++){
                 for (int z = -1; z < 1; z++) {
                     for (int y = -1; y < 2; y++) {
@@ -39,19 +40,13 @@ public class HugeSoulFungusFeature extends Feature<HugeSoulFungusFeatureConfig> 
             }
             newPos = startPos;
             for (int i = 0; i < random.nextBetween(7, 20); i++) {
-                if (isReplaceable(world, newPos, true)) {
-                    world.setBlockState(newPos, stem);
-                    newPos = startPos.up(i);
-                    if (random.nextFloat() > 0.4) {
-                        placeShelfCap(world, context.getConfig(), newPos, random);
-                    }
+                world.setBlockState(newPos, stem);
+                newPos = startPos.up(i);
+                if (random.nextFloat() > 0.4) {
+                    placeShelfCap(world, context.getConfig(), newPos, random);
                 }
-                else{
-                    generateHat(world, context.getConfig(), newPos, random);
-                    break;
-                }
-
             }
+            generateHat(world, context.getConfig(), newPos, random);
 
         return true;
     }
@@ -66,16 +61,39 @@ public class HugeSoulFungusFeature extends Feature<HugeSoulFungusFeatureConfig> 
         for (int x = -1; x < 1; x++){
             for (int z = -1; z < 1; z++){
                 if (random.nextBoolean()){
-                    world.setBlockState(startPos.add(x, 0, z), random.nextBoolean() ? config.spottedStemState : config.hatState);
+                    world.setBlockState(startPos.add(x, 0, z), random.nextBoolean() ? config.spottedHatState : config.hatState);
                 }
             }
         }
     }
     public static void generateHat(World world,HugeSoulFungusFeatureConfig config, BlockPos startPos, Random random){
-        for (int x = -5; x < 5; x++) {
-            for (int z = -5; z < 5; z++) {
-                world.setBlockState(startPos.add(x, 0, z), random.nextBoolean() ? config.spottedStemState : config.hatState);
+        BlockPos currentPos = startPos;
+        int size = 5;
+
+        for (int x = size; x > 0; x--){
+            for (int z = size; z > 0; z--){
+                world.setBlockState(currentPos, random.nextBoolean() ? config.spottedHatState : config.hatState);
             }
         }
+        for (int y = size-1; y > 0; y--) {
+            currentPos.up();
+            for (int x = size - 1; x > 0; x--) {
+                for (int z = size - 1; z > 0; z--) {
+                    world.setBlockState(currentPos, random.nextBoolean() ? config.spottedHatState : config.hatState);
+                }
+            }
+        }
+
+//        for (int loop = size; loop > 0; loop--) {
+//            for (int x = -loop; x < loop; x++) {
+//                for (int z = -loop; z < loop; z++) {
+//                    if (random.nextFloat() > 0.6){
+//                        currentPos = startPos.add(x, 5 - loop, z);
+//                        currentPos.offset(Direction.random(random));
+//                    }
+//                    world.setBlockState(currentPos, random.nextBoolean() ? config.spottedHatState : config.hatState);
+//                }
+//            }
+//        }
     }
 }

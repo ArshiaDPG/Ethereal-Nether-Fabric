@@ -10,6 +10,18 @@
     "ethereal_nether:cut_soul_sandstone_slab",
     "ethereal_nether:smooth_soul_sandstone",
     "ethereal_nether:smooth_soul_sandstone_stairs",
-    "ethereal_nether:smooth_soul_sandstone_slab"
+    "ethereal_nether:smooth_soul_sandstone_slab",
+    "ethereal_nether:cobbled_blackstone",
+    "ethereal_nether:cobbled_blackstone_stairs",
+    "ethereal_nether:cobbled_blackstone_slab",
+    "ethereal_nether:cobbled_blackstone_wall",
+    "ethereal_nether:cobbled_basalt",
+    "ethereal_nether:cobbled_basalt_stairs",
+    "ethereal_nether:cobbled_basalt_slab",
+    "ethereal_nether:cobbled_basalt_wall",
+    "ethereal_nether:polished_basalt_bricks",
+    "ethereal_nether:polished_basalt_brick_stairs",
+    "ethereal_nether:polished_basalt_brick_slab",
+    "ethereal_nether:cracked_polished_basalt_bricks"
   ]
 }

@@ -31,15 +31,16 @@ public class ENConfiguredFeatures {
                     ENBlocks.SANGUINATED_NYLIUM.getDefaultState(),
                     ENBlocks.SANGUINATED_STEM.getDefaultState(),
                     ENBlocks.SANGUINATED_WART_CAP.getDefaultState(),
-                    ENBlocks.SPOTTED_TAINTED_WART_CAP.getDefaultState(),
-                    ENBlocks.SPOTTED_SANGUINATED_WART_CAP.getDefaultState(), false));
+                    ENBlocks.SPOTTED_SANGUINATED_WART_CAP.getDefaultState(),
+                    ENBlocks.SANGUINATED_SHROOMLIGHT.getDefaultState(), false));
+
     public static final RegistryEntry<ConfiguredFeature<HugeSoulFungusFeatureConfig, ?>> SANGUINATED_FUNGUS_PLANTED = register("sanguinated_fungus_planted",
             ENFeature.HUGE_SOUL_FUNGUS, new HugeSoulFungusFeatureConfig(
                     ENBlocks.SANGUINATED_NYLIUM.getDefaultState(),
                     ENBlocks.SANGUINATED_STEM.getDefaultState(),
                     ENBlocks.SANGUINATED_WART_CAP.getDefaultState(),
-                    ENBlocks.SPOTTED_TAINTED_WART_CAP.getDefaultState(),
-                    ENBlocks.SPOTTED_SANGUINATED_WART_CAP.getDefaultState(), true));
+                    ENBlocks.SPOTTED_SANGUINATED_WART_CAP.getDefaultState(),
+                    ENBlocks.SANGUINATED_SHROOMLIGHT.getDefaultState(), true));
 
 
 //    public static final WeightedBlockStateProvider TAINTED_FOREST_VEGETATION_PROVIDER = new WeightedBlockStateProvider(DataPool.builder()

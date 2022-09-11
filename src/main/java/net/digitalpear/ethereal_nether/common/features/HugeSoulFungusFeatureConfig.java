@@ -11,8 +11,8 @@ public class HugeSoulFungusFeatureConfig implements FeatureConfig {
             return config.validBaseBlock;
         }), BlockState.CODEC.fieldOf("stem_state").forGetter((config) -> {
             return config.stemState;
-        }), BlockState.CODEC.fieldOf("spotted_stem_state").forGetter((config) -> {
-            return config.stemState;
+        }), BlockState.CODEC.fieldOf("spotted_hatstate").forGetter((config) -> {
+            return config.spottedHatState;
         }), BlockState.CODEC.fieldOf("hat_state").forGetter((config) -> {
             return config.hatState;
         }), BlockState.CODEC.fieldOf("decor_state").forGetter((config) -> {
@@ -23,15 +23,15 @@ public class HugeSoulFungusFeatureConfig implements FeatureConfig {
     });
     public final BlockState validBaseBlock;
     public final BlockState stemState;
-    public final BlockState spottedStemState;
+    public final BlockState spottedHatState;
     public final BlockState hatState;
     public final BlockState decorationState;
     public final boolean planted;
 
-    public HugeSoulFungusFeatureConfig(BlockState validBaseBlock, BlockState stemState, BlockState spottedStemState, BlockState hatState, BlockState decorationState, boolean planted) {
+    public HugeSoulFungusFeatureConfig(BlockState validBaseBlock, BlockState stemState, BlockState hatState, BlockState spottedHatState, BlockState decorationState, boolean planted) {
         this.validBaseBlock = validBaseBlock;
         this.stemState = stemState;
-        this.spottedStemState = spottedStemState;
+        this.spottedHatState = spottedHatState;
         this.hatState = hatState;
         this.decorationState = decorationState;
         this.planted = planted;

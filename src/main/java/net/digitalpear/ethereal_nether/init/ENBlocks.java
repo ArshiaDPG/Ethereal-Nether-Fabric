@@ -1,8 +1,5 @@
 package net.digitalpear.ethereal_nether.init;
 
-import com.google.common.base.Suppliers;
-import com.google.common.collect.BiMap;
-import com.google.common.collect.ImmutableBiMap;
 import net.digitalpear.ethereal_nether.EtherealNether;
 import net.digitalpear.ethereal_nether.common.blocks.SoilNyliumBlock;
 import net.digitalpear.ethereal_nether.common.blocks.SoulFungusBlock;
@@ -26,10 +23,6 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.registry.Registry;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.function.Supplier;
 
 @SuppressWarnings("unused")
 public class ENBlocks {
@@ -99,8 +92,8 @@ public class ENBlocks {
     public static final Block TAINTED_ROOTS = ENetherWoodset.createRoots(TAINTED);
     public static final Block POTTED_TAINTED_ROOTS = ENetherWoodset.createPottedRoots(TAINTED, TAINTED_ROOTS);
     public static final Block TAINTED_SPROUT = ENetherWoodset.createSprouts(TAINTED);
-    public static final Block TAINTED_WART_CAP = ENetherWoodset.createWartCap(TAINTED, ENTagGens.BLOCK_TAINTED_WART_CAPS);
-    public static final Block SPOTTED_TAINTED_WART_CAP = ENetherWoodset.createSpottedWartCap(TAINTED, ENTagGens.BLOCK_TAINTED_WART_CAPS);
+    public static final Block TAINTED_WART_CAP = ENetherWoodset.createTaintedWartCap(TAINTED);
+    public static final Block SPOTTED_TAINTED_WART_CAP = ENetherWoodset.createSpottedTaintedWartCap(TAINTED);
     public static final Block TAINTED_FENCE = ENetherWoodset.createFence(TAINTED);
     public static final Block TAINTED_FENCE_GATE = ENetherWoodset.createFenceGate(TAINTED);
 
@@ -122,8 +115,8 @@ public class ENBlocks {
     public static final Block SANGUINATED_ROOTS = ENetherWoodset.createRoots(SANGUINATED);
     public static final Block POTTED_SANGUINATED_ROOTS = ENetherWoodset.createPottedRoots(SANGUINATED, SANGUINATED_ROOTS);
     public static final Block SANGUINATED_SPROUT = ENetherWoodset.createSprouts(SANGUINATED);
-    public static final Block SANGUINATED_WART_CAP = ENetherWoodset.createWartCap(SANGUINATED, ENTagGens.BLOCK_SANGUINATED_WART_CAPS);
-    public static final Block SPOTTED_SANGUINATED_WART_CAP = ENetherWoodset.createSpottedWartCap(SANGUINATED, ENTagGens.BLOCK_SANGUINATED_WART_CAPS);
+    public static final Block SANGUINATED_WART_CAP = ENetherWoodset.createSanguinatedWartCap(SANGUINATED);
+    public static final Block SPOTTED_SANGUINATED_WART_CAP = ENetherWoodset.createSpottedSanguinatedWartCap(SANGUINATED);
     public static final Block SANGUINATED_FENCE = ENetherWoodset.createFence(SANGUINATED);
     public static final Block SANGUINATED_FENCE_GATE = ENetherWoodset.createFenceGate(SANGUINATED);
     public static final Block SANGUINATED_SHROOMLIGHT = ENetherWoodset.createShroomlight(SANGUINATED);
@@ -164,31 +157,35 @@ public class ENBlocks {
     public static final Block CRACKED_POLISHED_BASALT_BRICKS = createBlockWithItem("cracked_polished_basalt_bricks", new PillarBlock(basaltMaterial()), ItemGroup.BUILDING_BLOCKS);
 
 
+    public static AbstractBlock.Settings soulSandstoneSettings(){
+        return AbstractBlock.Settings.copy(Blocks.SANDSTONE).mapColor(Blocks.SOUL_SOIL.getDefaultMapColor()).sounds(ENBlockSoundGroups.SOUL_SANDSTONE);
+    }
 
     public static final Block SOUL_SANDSTONE = createBlockWithItem("soul_sandstone",
-            new Block(AbstractBlock.Settings.copy(Blocks.SANDSTONE)), ItemGroup.BUILDING_BLOCKS);
+            new Block(soulSandstoneSettings()), ItemGroup.BUILDING_BLOCKS);
     public static final Block SOUL_SANDSTONE_STAIRS = createBlockWithItem("soul_sandstone_stairs",
-            new StairsBlock(SOUL_SANDSTONE.getDefaultState(), AbstractBlock.Settings.copy(Blocks.SANDSTONE)), ItemGroup.BUILDING_BLOCKS);
+            new StairsBlock(SOUL_SANDSTONE.getDefaultState(), soulSandstoneSettings()), ItemGroup.BUILDING_BLOCKS);
     public static final Block SOUL_SANDSTONE_SLAB = createBlockWithItem("soul_sandstone_slab",
-            new SlabBlock(AbstractBlock.Settings.copy(Blocks.SANDSTONE)), ItemGroup.BUILDING_BLOCKS);
+            new SlabBlock(soulSandstoneSettings()), ItemGroup.BUILDING_BLOCKS);
     public static final Block SOUL_SANDSTONE_WALL = createBlockWithItem("soul_sandstone_wall",
-            new WallBlock(AbstractBlock.Settings.copy(Blocks.SANDSTONE)), ItemGroup.BUILDING_BLOCKS);
+            new WallBlock(soulSandstoneSettings()), ItemGroup.BUILDING_BLOCKS);
     public static final Block CUT_SOUL_SANDSTONE = createBlockWithItem("cut_soul_sandstone",
-            new Block(AbstractBlock.Settings.copy(Blocks.SANDSTONE)), ItemGroup.BUILDING_BLOCKS);
+            new Block(soulSandstoneSettings()), ItemGroup.BUILDING_BLOCKS);
     public static final Block CUT_SOUL_SANDSTONE_SLAB = createBlockWithItem("cut_soul_sandstone_slab",
-            new SlabBlock(AbstractBlock.Settings.copy(Blocks.SANDSTONE)), ItemGroup.BUILDING_BLOCKS);
+            new SlabBlock(soulSandstoneSettings()), ItemGroup.BUILDING_BLOCKS);
     public static final Block CHISELED_SOUL_SANDSTONE = createBlockWithItem("chiseled_soul_sandstone",
-            new Block(AbstractBlock.Settings.copy(Blocks.SANDSTONE)), ItemGroup.BUILDING_BLOCKS);
+            new Block(soulSandstoneSettings()), ItemGroup.BUILDING_BLOCKS);
     public static final Block SMOOTH_SOUL_SANDSTONE = createBlockWithItem("smooth_soul_sandstone",
-            new Block(AbstractBlock.Settings.copy(Blocks.SANDSTONE)), ItemGroup.BUILDING_BLOCKS);
+            new Block(soulSandstoneSettings()), ItemGroup.BUILDING_BLOCKS);
     public static final Block SMOOTH_SOUL_SANDSTONE_STAIRS = createBlockWithItem("smooth_soul_sandstone_stairs",
-            new StairsBlock(SOUL_SANDSTONE.getDefaultState(), AbstractBlock.Settings.copy(Blocks.SANDSTONE)), ItemGroup.BUILDING_BLOCKS);
+            new StairsBlock(SOUL_SANDSTONE.getDefaultState(), soulSandstoneSettings()), ItemGroup.BUILDING_BLOCKS);
     public static final Block SMOOTH_SOUL_SANDSTONE_SLAB = createBlockWithItem("smooth_soul_sandstone_slab",
-            new SlabBlock(AbstractBlock.Settings.copy(Blocks.SANDSTONE)), ItemGroup.BUILDING_BLOCKS);
+            new SlabBlock(soulSandstoneSettings()), ItemGroup.BUILDING_BLOCKS);
     public static final Block CHISELED_SOUL_SANDSTONE_LAMP = createBlockWithItem("chiseled_soul_sandstone_lamp",
-            new Block(AbstractBlock.Settings.copy(Blocks.SANDSTONE).luminance((state) -> 10)), ItemGroup.DECORATIONS);
+            new Block(soulSandstoneSettings().luminance((state) -> 10)), ItemGroup.DECORATIONS);
 
-    public static final Block SOUL_GLASS = createBlockWithItem("soul_glass", new SoulGlassBlock(AbstractBlock.Settings.copy(Blocks.TINTED_GLASS)), ItemGroup.DECORATIONS);
+    public static final Block SOUL_GLASS = createBlockWithItem("soul_glass",
+            new SoulGlassBlock(AbstractBlock.Settings.copy(Blocks.TINTED_GLASS).sounds(ENBlockSoundGroups.SOUL_GLASS)), ItemGroup.DECORATIONS);
 
     /*
         Nether Bricks
@@ -255,10 +252,6 @@ public class ENBlocks {
                         new CrimsonNetherBrickFlowerPotBlock(((FlowerPotBlock) block).getContent(), AbstractBlock.Settings.copy(CRIMSON_NETHER_BRICK_FLOWER_POT)));
                 createBlockWithoutItem("warped_nether_brick_" + block.getTranslationKey().split("\\.")[2],
                         new WarpedNetherBrickFlowerPotBlock(((FlowerPotBlock) block).getContent(), AbstractBlock.Settings.copy(WARPED_NETHER_BRICK_FLOWER_POT)));
-            }
-
-            if (block.getTranslationKey().contains("blackstone")){
-                
             }
         });
     }

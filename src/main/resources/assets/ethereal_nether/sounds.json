@@ -147,5 +147,59 @@
 	  "ethereal_nether:block/wart/step4",
 	  "ethereal_nether:block/wart/step5"
     ]
+  },
+  "block.ethereal_nether.soul_glass_step": {
+    "category": "block",
+	"subtitle": "subtitles.ethereal_nether.soul_glass_step",
+    "sounds": [
+      "ethereal_nether:block/soul_glass/step1",
+	  "ethereal_nether:block/soul_glass/step2",
+	  "ethereal_nether:block/soul_glass/step3",
+	  "ethereal_nether:block/soul_glass/step4",
+	  "ethereal_nether:block/soul_glass/step5",
+	  "ethereal_nether:block/soul_glass/step6"
+    ]
+  },
+  "block.ethereal_nether.soul_glass_break": {
+    "category": "block",
+	"subtitle": "subtitles.ethereal_nether.soul_glass_break",
+    "sounds": [
+      "ethereal_nether:block/soul_glass/break1",
+	  "ethereal_nether:block/soul_glass/break2",
+	  "ethereal_nether:block/soul_glass/break3"
+    ]
+  },
+  "block.ethereal_nether.soul_glass_place": {
+    "category": "block",
+	"subtitle": "subtitles.ethereal_nether.soul_glass_place",
+    "sounds": [
+      "ethereal_nether:block/soul_glass/place1",
+	  "ethereal_nether:block/soul_glass/place2",
+	  "ethereal_nether:block/soul_glass/place3",
+	  "ethereal_nether:block/soul_glass/place4"
+    ]
+  },
+  "block.ethereal_nether.soul_sandstone_break": {
+    "category": "block",
+	"subtitle": "subtitles.ethereal_nether.soul_sandstone_break",
+    "sounds": [
+      "ethereal_nether:block/soul_sandstone/break1",
+	  "ethereal_nether:block/soul_sandstone/break2",
+	  "ethereal_nether:block/soul_sandstone/break3",
+	  "ethereal_nether:block/soul_sandstone/break4",
+	  "ethereal_nether:block/soul_sandstone/break5",
+	  "ethereal_nether:block/soul_sandstone/break6"
+    ]
+  },
+  "block.ethereal_nether.soul_sandstone_step": {
+    "category": "block",
+	"subtitle": "subtitles.ethereal_nether.soul_sandstone_step",
+    "sounds": [
+      "ethereal_nether:block/soul_sandstone/step1",
+	  "ethereal_nether:block/soul_sandstone/step2",
+	  "ethereal_nether:block/soul_sandstone/step3",
+	  "ethereal_nether:block/soul_sandstone/step4",
+	  "ethereal_nether:block/soul_sandstone/step5"
+    ]
   }
 }

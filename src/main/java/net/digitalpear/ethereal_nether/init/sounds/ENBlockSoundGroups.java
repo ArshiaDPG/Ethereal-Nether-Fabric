@@ -1,5 +1,6 @@
 package net.digitalpear.ethereal_nether.init.sounds;
 
+import net.minecraft.block.Blocks;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundEvents;
 
@@ -9,7 +10,6 @@ public class ENBlockSoundGroups {
             ENSoundEvents.SOUL_WART_BREAK,
             ENSoundEvents.SOUL_WART_STEP, SoundEvents.ITEM_NETHER_WART_PLANT,
             SoundEvents.BLOCK_STONE_HIT, SoundEvents.BLOCK_STONE_FALL);
-
 
     public static final BlockSoundGroup SOUL_STEM = new BlockSoundGroup(1.0F, 1.0F,
             ENSoundEvents.SOUL_STEM_BREAK,
@@ -33,13 +33,23 @@ public class ENBlockSoundGroups {
 
     public static final BlockSoundGroup SOIL_NYLIUM = new BlockSoundGroup(1.0F, 1.0F,
             ENSoundEvents.SOIL_NYLIUM_BREAK,
-            ENSoundEvents.SOIL_NYLIUM_STEP,
-            SoundEvents.BLOCK_SOUL_SOIL_PLACE, SoundEvents.BLOCK_SOUL_SOIL_HIT, SoundEvents.BLOCK_SOUL_SOIL_FALL);
+            ENSoundEvents.SOIL_NYLIUM_STEP, ENSoundEvents.SOIL_NYLIUM_BREAK,
+            SoundEvents.BLOCK_SOUL_SOIL_HIT, SoundEvents.BLOCK_SOUL_SOIL_FALL);
 
     public static final BlockSoundGroup SOUL_ROOTS = new BlockSoundGroup(1.0F, 1.0F,
             ENSoundEvents.SOUL_ROOTS_BREAK,
-            ENSoundEvents.SOUL_ROOTS_STEP, SoundEvents.BLOCK_ROOTS_PLACE,
+            ENSoundEvents.SOUL_ROOTS_STEP, ENSoundEvents.SOUL_ROOTS_BREAK,
             SoundEvents.BLOCK_ROOTS_HIT, SoundEvents.BLOCK_ROOTS_FALL);
+
+    public static final BlockSoundGroup SOUL_GLASS = new BlockSoundGroup(1.0F, 1.0F,
+            ENSoundEvents.SOUL_GLASS_BREAK,
+            ENSoundEvents.SOUL_GLASS_STEP, ENSoundEvents.SOUL_GLASS_PLACE,
+            SoundEvents.BLOCK_ROOTS_HIT, SoundEvents.BLOCK_ROOTS_FALL);
+
+    public static final BlockSoundGroup SOUL_SANDSTONE = new BlockSoundGroup(1.0F, 1.0F,
+            ENSoundEvents.SOUL_SANDSTONE_BREAK,
+            ENSoundEvents.SOUL_SANDSTONE_STEP, ENSoundEvents.SOUL_SANDSTONE_BREAK,
+            SoundEvents.BLOCK_STONE_HIT, SoundEvents.BLOCK_STONE_FALL);
 
 
 }
