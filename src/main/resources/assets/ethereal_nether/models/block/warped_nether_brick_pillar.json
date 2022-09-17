@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "ethereal_nether:block/warped_nether_brick_pillar_top",
+    "side": "ethereal_nether:block/warped_nether_brick_pillar_side"
+  }
+}

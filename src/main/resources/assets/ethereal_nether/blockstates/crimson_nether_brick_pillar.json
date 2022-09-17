@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "ethereal_nether:block/crimson_nether_brick_pillar",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "ethereal_nether:block/crimson_nether_brick_pillar"
+    },
+    "axis=z": {
+      "model": "ethereal_nether:block/crimson_nether_brick_pillar",
+      "x": 90
+    }
+  }
+}

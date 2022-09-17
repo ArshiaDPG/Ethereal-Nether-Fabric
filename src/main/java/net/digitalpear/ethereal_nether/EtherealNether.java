@@ -11,6 +11,7 @@ public class EtherealNether implements ModInitializer {
     public static String id(String name){
         return MOD_ID + ":" + name;
     }
+
     @Override
     public void onInitialize() {
         ENBlocks.init();

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ethereal_nether:block/polished_glowstone_slab"
+    },
+    "type=double": {
+      "model": "ethereal_nether:block/polished_glowstone"
+    },
+    "type=top": {
+      "model": "ethereal_nether:block/polished_glowstone_slab_top"
+    }
+  }
+}

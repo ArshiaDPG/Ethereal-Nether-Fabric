@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_inventory",
+  "textures": {
+    "texture": "ethereal_nether:block/crimson_nether_bricks"
+  }
+}

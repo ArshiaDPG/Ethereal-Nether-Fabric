@@ -22,6 +22,8 @@
     "ethereal_nether:polished_basalt_bricks",
     "ethereal_nether:polished_basalt_brick_stairs",
     "ethereal_nether:polished_basalt_brick_slab",
-    "ethereal_nether:cracked_polished_basalt_bricks"
+    "ethereal_nether:cracked_polished_basalt_bricks",
+    "ethereal_nether:polished_blackstone_pillar",
+    "ethereal_nether:crimson_nether_brick_pillar"
   ]
 }
