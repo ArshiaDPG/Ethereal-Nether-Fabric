@@ -11,7 +11,6 @@ import net.digitalpear.ethereal_nether.common.blocks.vines.BleedingVinesBlock;
 import net.digitalpear.ethereal_nether.common.blocks.vines.BleedingVinesPlantBlock;
 import net.digitalpear.ethereal_nether.common.blocks.vines.CorruptingVinesBlock;
 import net.digitalpear.ethereal_nether.common.blocks.vines.CorruptingVinesPlantBlock;
-import net.digitalpear.ethereal_nether.common.datagens.ENTagGens;
 import net.digitalpear.ethereal_nether.init.sets.ENetherWoodset;
 import net.digitalpear.ethereal_nether.init.sounds.ENBlockSoundGroups;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
@@ -91,7 +90,7 @@ public class ENBlocks {
     public static final Block TAINTED_TRAPDOOR = ENetherWoodset.createTrapdoor(TAINTED);
     public static final Block TAINTED_ROOTS = ENetherWoodset.createRoots(TAINTED);
     public static final Block POTTED_TAINTED_ROOTS = ENetherWoodset.createPottedRoots(TAINTED, TAINTED_ROOTS);
-    public static final Block TAINTED_SPROUT = ENetherWoodset.createSprouts(TAINTED);
+    public static final Block TAINTED_SPROUTS = ENetherWoodset.createSprouts(TAINTED);
     public static final Block TAINTED_WART_CAP = ENetherWoodset.createTaintedWartCap(TAINTED);
     public static final Block SPOTTED_TAINTED_WART_CAP = ENetherWoodset.createSpottedTaintedWartCap(TAINTED);
     public static final Block TAINTED_FENCE = ENetherWoodset.createFence(TAINTED);
@@ -138,13 +137,13 @@ public class ENBlocks {
 
 
     public static final Block COBBLED_BLACKSTONE = createBlockWithItem("cobbled_blackstone", new Block(blackstoneMaterial()), ItemGroup.BUILDING_BLOCKS);
-    public static final Block COBBLED_BLACKSTONE_STAIRS_AND_SLAB = createCobbledStairsAndSlab("cobbled_blackstone", blackstoneMaterial(), COBBLED_BLACKSTONE);
-    public static final Block COBBLED_BLACKSTONE_WALL = createStoneWallBlock("cobbled_blackstone", blackstoneMaterial());
+    public static final Block COBBLED_BLACKSTONE_STAIRS_AND_SLAB = createStairsAndSlab("cobbled_blackstone", blackstoneMaterial(), COBBLED_BLACKSTONE);
+    public static final Block COBBLED_BLACKSTONE_WALL = createWallBlock("cobbled_blackstone", blackstoneMaterial());
     public static final Block POLISHED_BLACKSTONE_PILLAR = createBlockWithItem("polished_blackstone_pillar", new PillarBlock(blackstoneMaterial()), ItemGroup.BUILDING_BLOCKS);
 
     public static final Block COBBLED_BASALT = createBlockWithItem("cobbled_basalt", new Block(basaltMaterial()), ItemGroup.BUILDING_BLOCKS);
-    public static final Block COBBLED_BASALT_STAIRS_AND_SLAB = createCobbledStairsAndSlab("cobbled_basalt", basaltMaterial(), COBBLED_BASALT);
-    public static final Block COBBLED_BASALT_WALL = createStoneWallBlock("cobbled_basalt", basaltMaterial());
+    public static final Block COBBLED_BASALT_STAIRS_AND_SLAB = createStairsAndSlab("cobbled_basalt", basaltMaterial(), COBBLED_BASALT);
+    public static final Block COBBLED_BASALT_WALL = createWallBlock("cobbled_basalt", basaltMaterial());
 
     public static final Block POLISHED_BASALT_BUTTON = createBlockWithItem("polished_basalt_button", new StoneButtonBlock(basaltMaterial()), ItemGroup.REDSTONE);
     public static final Block POLISHED_BASALT_PRESSURE_PLATE = createBlockWithItem("polished_basalt_pressure_plate", new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, basaltMaterial()), ItemGroup.REDSTONE);
@@ -152,8 +151,8 @@ public class ENBlocks {
 
 
     public static final Block POLISHED_BASALT_BRICKS = createBlockWithItem("polished_basalt_bricks", new PillarBlock(basaltMaterial()), ItemGroup.BUILDING_BLOCKS);
-    public static final Block POLISHED_BASALT_BRICK_STAIRS_AND_SLAB = createCobbledStairsAndSlab("polished_basalt_brick", basaltMaterial(), POLISHED_BASALT_BRICKS);
-    public static final Block POLISHED_BASALT_BRICK_WALL = createStoneWallBlock("polished_basalt_brick", basaltMaterial());
+    public static final Block POLISHED_BASALT_BRICK_STAIRS_AND_SLAB = createStairsAndSlab("polished_basalt_brick", basaltMaterial(), POLISHED_BASALT_BRICKS);
+    public static final Block POLISHED_BASALT_BRICK_WALL = createWallBlock("polished_basalt_brick", basaltMaterial());
     public static final Block CRACKED_POLISHED_BASALT_BRICKS = createBlockWithItem("cracked_polished_basalt_bricks", new PillarBlock(basaltMaterial()), ItemGroup.BUILDING_BLOCKS);
 
 
@@ -218,24 +217,24 @@ public class ENBlocks {
 
     public static final Block POLISHED_OBSIDIAN = createBlockWithItem("polished_obsidian", new Block(AbstractBlock.Settings.copy(Blocks.OBSIDIAN)), ItemGroup.BUILDING_BLOCKS);
     public static final Block POLISHED_OBSIDIAN_BRICKS = createBlockWithItem("polished_obsidian_bricks", new Block(AbstractBlock.Settings.copy(Blocks.OBSIDIAN)), ItemGroup.BUILDING_BLOCKS);
-    public static final Block POLISHED_OBSIDIAN_BRICK_STAIRS_AND_SLAB = createCobbledStairsAndSlab("polished_obsidian_brick", AbstractBlock.Settings.copy(Blocks.OBSIDIAN), POLISHED_OBSIDIAN_BRICKS);
-    public static final Block POLISHED_OBSIDIAN_BRICK_WALL = createStoneWallBlock("polished_obsidian_brick", AbstractBlock.Settings.copy(Blocks.OBSIDIAN));
+    public static final Block POLISHED_OBSIDIAN_BRICK_STAIRS_AND_SLAB = createStairsAndSlab("polished_obsidian_brick", AbstractBlock.Settings.copy(Blocks.OBSIDIAN), POLISHED_OBSIDIAN_BRICKS);
+    public static final Block POLISHED_OBSIDIAN_BRICK_WALL = createWallBlock("polished_obsidian_brick", AbstractBlock.Settings.copy(Blocks.OBSIDIAN));
     public static final Block POLISHED_OBSIDIAN_PRESSURE_PLATE = createBlockWithItem("polished_obsidian_pressure_plate",
             new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, AbstractBlock.Settings.copy(Blocks.OBSIDIAN)), ItemGroup.BUILDING_BLOCKS);
 
     public static final Block POLISHED_GLOWSTONE = createBlockWithItem("polished_glowstone", new Block(AbstractBlock.Settings.copy(Blocks.GLOWSTONE)), ItemGroup.BUILDING_BLOCKS);
     public static final Block POLISHED_GLOWSTONE_BRICKS = createBlockWithItem("polished_glowstone_bricks", new Block(AbstractBlock.Settings.copy(Blocks.GLOWSTONE)), ItemGroup.BUILDING_BLOCKS);
-    public static final Block POLISHED_GLOWSTONE_BRICK_STAIRS_AND_SLAB = createCobbledStairsAndSlab("polished_glowstone_brick", AbstractBlock.Settings.copy(Blocks.GLOWSTONE), POLISHED_GLOWSTONE_BRICKS);
-    public static final Block POLISHED_GLOWSTONE_BRICK_WALL = createStoneWallBlock("polished_glowstone_brick", AbstractBlock.Settings.copy(Blocks.GLOWSTONE));
+    public static final Block POLISHED_GLOWSTONE_BRICK_STAIRS_AND_SLAB = createStairsAndSlab("polished_glowstone_brick", AbstractBlock.Settings.copy(Blocks.GLOWSTONE), POLISHED_GLOWSTONE_BRICKS);
+    public static final Block POLISHED_GLOWSTONE_BRICK_WALL = createWallBlock("polished_glowstone_brick", AbstractBlock.Settings.copy(Blocks.GLOWSTONE));
     public static final Block POLISHED_GLOWSTONE_PRESSURE_PLATE = createBlockWithItem("polished_glowstone_pressure_plate",
             new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, AbstractBlock.Settings.copy(Blocks.GLOWSTONE)), ItemGroup.BUILDING_BLOCKS);
 
 
-    public static Block createCobbledStairsAndSlab(String name, AbstractBlock.Settings properties, Block baseBlock){
+    public static Block createStairsAndSlab(String name, AbstractBlock.Settings properties, Block baseBlock){
         createBlockWithItem(name + "_slab", new SlabBlock(properties), ItemGroup.BUILDING_BLOCKS);
         return createBlockWithItem(name + "_stairs", new StairsBlock(baseBlock.getDefaultState(), properties), ItemGroup.BUILDING_BLOCKS);
     }
-    public static Block createStoneWallBlock(String name, AbstractBlock.Settings properties){
+    public static Block createWallBlock(String name, AbstractBlock.Settings properties){
         return createBlockWithItem(name + "_wall", new WallBlock(properties), ItemGroup.DECORATIONS);
     }
 

@@ -3,11 +3,15 @@ package net.digitalpear.ethereal_nether.init;
 import net.digitalpear.ethereal_nether.EtherealNether;
 import net.digitalpear.ethereal_nether.common.features.ENFeature;
 import net.digitalpear.ethereal_nether.common.features.HugeSoulFungusFeatureConfig;
+import net.minecraft.block.BlockState;
+import net.minecraft.util.collection.DataPool;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.FeatureConfig;
+import net.minecraft.world.gen.feature.NetherForestVegetationFeatureConfig;
+import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 
 
 public class ENConfiguredFeatures {
@@ -43,20 +47,35 @@ public class ENConfiguredFeatures {
                     ENBlocks.SANGUINATED_SHROOMLIGHT.getDefaultState(), true));
 
 
-//    public static final WeightedBlockStateProvider TAINTED_FOREST_VEGETATION_PROVIDER = new WeightedBlockStateProvider(DataPool.builder()
-//            .add(ENBlocks.TAINTED_ROOTS.getDefaultState(), 85)
-//            .add(ENBlocks.SANGUINATED_ROOTS.getDefaultState(), 1)
-//            .add(ENBlocks.TAINTED_FUNGUS.getDefaultState(), 13)
-//            .add(ENBlocks.SANGUINATED_FUNGUS.getDefaultState(), 1));
-//
-//
-//    public static final RegistryEntry<ConfiguredFeature<NetherForestVegetationFeatureConfig, ?>> TAINTED_FOREST_VEGETATION =
-//            register("tainted_forest_vegetation", Feature.NETHER_FOREST_VEGETATION,
-//                    new NetherForestVegetationFeatureConfig(TAINTED_FOREST_VEGETATION_PROVIDER, 8, 4));
-//
-//    public static final RegistryEntry<ConfiguredFeature<NetherForestVegetationFeatureConfig, ?>> TAINTED_FOREST_VEGETATION_BONEMEAL =
-//            register("tainted_forest_vegetation_bonemeal", Feature.NETHER_FOREST_VEGETATION,
-//                    new NetherForestVegetationFeatureConfig(TAINTED_FOREST_VEGETATION_PROVIDER, 3, 1));
+    public static final WeightedBlockStateProvider TAINTED_FOREST_VEGETATION_PROVIDER = new WeightedBlockStateProvider(DataPool.<BlockState>builder()
+            .add(ENBlocks.TAINTED_ROOTS.getDefaultState(), 85)
+            .add(ENBlocks.SANGUINATED_ROOTS.getDefaultState(), 1)
+            .add(ENBlocks.TAINTED_FUNGUS.getDefaultState(), 13)
+            .add(ENBlocks.SANGUINATED_FUNGUS.getDefaultState(), 1));
+
+
+    public static final RegistryEntry<ConfiguredFeature<NetherForestVegetationFeatureConfig, ?>> TAINTED_FOREST_VEGETATION =
+            register("tainted_forest_vegetation", Feature.NETHER_FOREST_VEGETATION,
+                    new NetherForestVegetationFeatureConfig(TAINTED_FOREST_VEGETATION_PROVIDER, 8, 4));
+
+    public static final RegistryEntry<ConfiguredFeature<NetherForestVegetationFeatureConfig, ?>> TAINTED_FOREST_VEGETATION_BONEMEAL =
+            register("tainted_forest_vegetation_bonemeal", Feature.NETHER_FOREST_VEGETATION,
+                    new NetherForestVegetationFeatureConfig(TAINTED_FOREST_VEGETATION_PROVIDER, 3, 1));
+
+    public static final WeightedBlockStateProvider SANGUINATED_FOREST_VEGETATION_PROVIDER = new WeightedBlockStateProvider(DataPool.<BlockState>builder()
+            .add(ENBlocks.SANGUINATED_ROOTS.getDefaultState(), 85)
+            .add(ENBlocks.TAINTED_ROOTS.getDefaultState(), 1)
+            .add(ENBlocks.SANGUINATED_FUNGUS.getDefaultState(), 13)
+            .add(ENBlocks.TAINTED_FUNGUS.getDefaultState(), 1));
+
+
+    public static final RegistryEntry<ConfiguredFeature<NetherForestVegetationFeatureConfig, ?>> SANGUINATED_FOREST_VEGETATION =
+            register("tainted_forest_vegetation", Feature.NETHER_FOREST_VEGETATION,
+                    new NetherForestVegetationFeatureConfig(SANGUINATED_FOREST_VEGETATION_PROVIDER, 8, 4));
+
+    public static final RegistryEntry<ConfiguredFeature<NetherForestVegetationFeatureConfig, ?>> SANGUINATED_FOREST_VEGETATION_BONEMEAL =
+            register("tainted_forest_vegetation_bonemeal", Feature.NETHER_FOREST_VEGETATION,
+                    new NetherForestVegetationFeatureConfig(SANGUINATED_FOREST_VEGETATION_PROVIDER, 3, 1));
 
 
     public static <FC extends FeatureConfig, F extends Feature<FC>> RegistryEntry register(String id, F feature, FC config) {
