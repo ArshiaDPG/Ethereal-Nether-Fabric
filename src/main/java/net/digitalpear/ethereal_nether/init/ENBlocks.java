@@ -256,6 +256,7 @@ public class ENBlocks {
         StrippableBlockRegistry.register(SANGUINATED_HYPHAE, STRIPPED_SANGUINATED_HYPHAE);
 
 
+
         Registry.BLOCK.forEach(block -> {
             if ((block instanceof FlowerPotBlock) && ((FlowerPotBlock) block).getContent() != Blocks.AIR){
                 createBlockWithoutItem("nether_brick_" + block.getTranslationKey().split("\\.")[2],

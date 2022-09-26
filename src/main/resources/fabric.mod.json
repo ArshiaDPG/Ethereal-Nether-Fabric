@@ -21,9 +21,6 @@
     ],
     "main": [
       "net.digitalpear.ethereal_nether.EtherealNether"
-    ],
-    "fabric-datagen": [
-      "net.digitalpear.ethereal_nether.EtherealNetherDatagen"
     ]
   },
 

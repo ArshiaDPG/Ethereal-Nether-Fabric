@@ -1,6 +1,6 @@
 package net.digitalpear.ethereal_nether.common.blocks;
 
-import net.digitalpear.ethereal_nether.common.datagens.ENTagGens;
+import net.digitalpear.ethereal_nether.init.tags.ENBlockTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ConnectingBlock;
@@ -38,7 +38,7 @@ public class SanguinatedWartCapBlock extends Block {
     }
 
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
-        return neighborState.isIn(ENTagGens.BLOCK_SANGUINATED_WART_CAPS) ? state.with(FACING_PROPERTIES.get(direction), false) : super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
+        return neighborState.isIn(ENBlockTags.BLOCK_SANGUINATED_WART_CAPS) ? state.with(FACING_PROPERTIES.get(direction), false) : super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
     }
 
     public BlockState rotate(BlockState state, BlockRotation rotation) {

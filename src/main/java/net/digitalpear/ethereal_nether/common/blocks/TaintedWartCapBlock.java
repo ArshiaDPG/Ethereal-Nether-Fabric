@@ -1,14 +1,12 @@
 package net.digitalpear.ethereal_nether.common.blocks;
 
-import net.digitalpear.ethereal_nether.common.datagens.ENTagGens;
+import net.digitalpear.ethereal_nether.init.tags.ENBlockTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ConnectingBlock;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.Property;
-import net.minecraft.tag.TagKey;
 import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
@@ -40,7 +38,7 @@ public class TaintedWartCapBlock extends Block {
     }
 
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
-        return neighborState.isIn(ENTagGens.BLOCK_TAINTED_WART_CAPS) ? state.with(FACING_PROPERTIES.get(direction), false) : super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
+        return neighborState.isIn(ENBlockTags.BLOCK_TAINTED_WART_CAPS) ? state.with(FACING_PROPERTIES.get(direction), false) : super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
     }
 
     public BlockState rotate(BlockState state, BlockRotation rotation) {
