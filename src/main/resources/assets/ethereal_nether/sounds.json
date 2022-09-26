@@ -201,5 +201,15 @@
 	  "ethereal_nether:block/soul_sandstone/step4",
 	  "ethereal_nether:block/soul_sandstone/step5"
     ]
+  },
+  "block.ethereal_nether.soul_fire_ambient": {
+    "category": "block",
+	"subtitle": "subtitles.ethereal_nether.soul_fire_ambient",
+    "sounds": [
+      "ethereal_nether:block/soul_fire/ambient1",
+	  "ethereal_nether:block/soul_fire/ambient2",
+	  "ethereal_nether:block/soul_fire/ambient3",
+	  "ethereal_nether:block/soul_fire/ambient4"
+    ]
   }
 }

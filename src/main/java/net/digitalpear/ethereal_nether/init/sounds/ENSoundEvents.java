@@ -9,14 +9,19 @@ import net.minecraft.util.registry.Registry;
 @SuppressWarnings("unused")
 public class ENSoundEvents {
     public static final SoundEvent SOUL_FUNGUS_BREAK = createSound("block.ethereal_nether.soul_fungus_break");
+
     public static final SoundEvent SOIL_NYLIUM_BREAK = createSound("block.ethereal_nether.soil_nylium_break");
     public static final SoundEvent SOIL_NYLIUM_STEP = createSound("block.ethereal_nether.soil_nylium_step");
+
     public static final SoundEvent SOUL_ROOTS_BREAK = createSound("block.ethereal_nether.soul_roots_break");
     public static final SoundEvent SOUL_ROOTS_STEP = createSound("block.ethereal_nether.soul_roots_step");
+
     public static final SoundEvent SOUL_SHROOMLIGHT_BREAK = createSound("block.ethereal_nether.soul_shroomlight_break");
     public static final SoundEvent SOUL_SHROOMLIGHT_STEP = createSound("block.ethereal_nether.soul_shroomlight_step");
+
     public static final SoundEvent SOUL_SPROUTS_BREAK = createSound("block.ethereal_nether.soul_sprouts_break");
     public static final SoundEvent SOUL_SPROUTS_STEP = createSound("block.ethereal_nether.soul_sprouts_step");
+
     public static final SoundEvent SOUL_STEM_BREAK = createSound("block.ethereal_nether.soul_stem_break");
     public static final SoundEvent SOUL_STEM_STEP = createSound("block.ethereal_nether.soul_stem_step");
     public static final SoundEvent SOUL_WART_BREAK = createSound("block.ethereal_nether.soul_wart_break");
@@ -28,6 +33,9 @@ public class ENSoundEvents {
 
     public static final SoundEvent SOUL_SANDSTONE_STEP = createSound("block.ethereal_nether.soul_sandstone_step");
     public static final SoundEvent SOUL_SANDSTONE_BREAK = createSound("block.ethereal_nether.soul_sandstone_break");
+
+
+    public static final SoundEvent SOUL_FIRE_AMBIENT = createSound("block.ethereal_nether.soul_fire_ambient");
 
 
 

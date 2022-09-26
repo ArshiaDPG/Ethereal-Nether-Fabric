@@ -4,6 +4,7 @@ import net.digitalpear.ethereal_nether.EtherealNether;
 import net.digitalpear.ethereal_nether.common.blocks.SoilNyliumBlock;
 import net.digitalpear.ethereal_nether.common.blocks.SoulFungusBlock;
 import net.digitalpear.ethereal_nether.common.blocks.SoulGlassBlock;
+import net.digitalpear.ethereal_nether.common.blocks.entity.ENSignTypes;
 import net.digitalpear.ethereal_nether.common.blocks.pots.CrimsonNetherBrickFlowerPotBlock;
 import net.digitalpear.ethereal_nether.common.blocks.pots.NetherBrickFlowerPotBlock;
 import net.digitalpear.ethereal_nether.common.blocks.pots.WarpedNetherBrickFlowerPotBlock;
@@ -95,6 +96,11 @@ public class ENBlocks {
     public static final Block SPOTTED_TAINTED_WART_CAP = ENetherWoodset.createSpottedTaintedWartCap(TAINTED);
     public static final Block TAINTED_FENCE = ENetherWoodset.createFence(TAINTED);
     public static final Block TAINTED_FENCE_GATE = ENetherWoodset.createFenceGate(TAINTED);
+    public static final Block TAINTED_SIGN = ENetherWoodset.createSign(TAINTED, ENSignTypes.TAINTED);
+    public static final Block TAINTED_WALL_SIGN = ENetherWoodset.createWallSign(TAINTED, ENSignTypes.TAINTED);
+
+
+
 
     /*
         SANGUINATED
@@ -119,6 +125,9 @@ public class ENBlocks {
     public static final Block SANGUINATED_FENCE = ENetherWoodset.createFence(SANGUINATED);
     public static final Block SANGUINATED_FENCE_GATE = ENetherWoodset.createFenceGate(SANGUINATED);
     public static final Block SANGUINATED_SHROOMLIGHT = ENetherWoodset.createShroomlight(SANGUINATED);
+    public static final Block SANGUINATED_SIGN = ENetherWoodset.createSign(SANGUINATED, ENSignTypes.SANGUINATED);
+    public static final Block SANGUINATED_WALL_SIGN = ENetherWoodset.createWallSign(SANGUINATED, ENSignTypes.SANGUINATED);
+
 
     public static final Block TAINTED_FUNGUS = createBlockWithItem(TAINTED.name() + "_fungus",
             new SoulFungusBlock(AbstractBlock.Settings.copy(Blocks.WARPED_FUNGUS).sounds(ENBlockSoundGroups.SOUL_FUNGUS).mapColor(TAINTED.topColor()),
@@ -220,14 +229,14 @@ public class ENBlocks {
     public static final Block POLISHED_OBSIDIAN_BRICK_STAIRS_AND_SLAB = createStairsAndSlab("polished_obsidian_brick", AbstractBlock.Settings.copy(Blocks.OBSIDIAN), POLISHED_OBSIDIAN_BRICKS);
     public static final Block POLISHED_OBSIDIAN_BRICK_WALL = createWallBlock("polished_obsidian_brick", AbstractBlock.Settings.copy(Blocks.OBSIDIAN));
     public static final Block POLISHED_OBSIDIAN_PRESSURE_PLATE = createBlockWithItem("polished_obsidian_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, AbstractBlock.Settings.copy(Blocks.OBSIDIAN)), ItemGroup.BUILDING_BLOCKS);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, AbstractBlock.Settings.copy(Blocks.OBSIDIAN)), ItemGroup.REDSTONE);
 
     public static final Block POLISHED_GLOWSTONE = createBlockWithItem("polished_glowstone", new Block(AbstractBlock.Settings.copy(Blocks.GLOWSTONE)), ItemGroup.BUILDING_BLOCKS);
     public static final Block POLISHED_GLOWSTONE_BRICKS = createBlockWithItem("polished_glowstone_bricks", new Block(AbstractBlock.Settings.copy(Blocks.GLOWSTONE)), ItemGroup.BUILDING_BLOCKS);
     public static final Block POLISHED_GLOWSTONE_BRICK_STAIRS_AND_SLAB = createStairsAndSlab("polished_glowstone_brick", AbstractBlock.Settings.copy(Blocks.GLOWSTONE), POLISHED_GLOWSTONE_BRICKS);
     public static final Block POLISHED_GLOWSTONE_BRICK_WALL = createWallBlock("polished_glowstone_brick", AbstractBlock.Settings.copy(Blocks.GLOWSTONE));
     public static final Block POLISHED_GLOWSTONE_PRESSURE_PLATE = createBlockWithItem("polished_glowstone_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, AbstractBlock.Settings.copy(Blocks.GLOWSTONE)), ItemGroup.BUILDING_BLOCKS);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, AbstractBlock.Settings.copy(Blocks.GLOWSTONE)), ItemGroup.REDSTONE);
 
 
     public static Block createStairsAndSlab(String name, AbstractBlock.Settings properties, Block baseBlock){

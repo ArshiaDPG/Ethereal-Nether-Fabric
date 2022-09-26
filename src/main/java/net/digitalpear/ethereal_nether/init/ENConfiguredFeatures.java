@@ -7,10 +7,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.util.collection.DataPool;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.RegistryEntry;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureConfig;
-import net.minecraft.world.gen.feature.NetherForestVegetationFeatureConfig;
+import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 
 
@@ -70,12 +67,16 @@ public class ENConfiguredFeatures {
 
 
     public static final RegistryEntry<ConfiguredFeature<NetherForestVegetationFeatureConfig, ?>> SANGUINATED_FOREST_VEGETATION =
-            register("tainted_forest_vegetation", Feature.NETHER_FOREST_VEGETATION,
+            register("sanguinated_forest_vegetation", Feature.NETHER_FOREST_VEGETATION,
                     new NetherForestVegetationFeatureConfig(SANGUINATED_FOREST_VEGETATION_PROVIDER, 8, 4));
 
     public static final RegistryEntry<ConfiguredFeature<NetherForestVegetationFeatureConfig, ?>> SANGUINATED_FOREST_VEGETATION_BONEMEAL =
-            register("tainted_forest_vegetation_bonemeal", Feature.NETHER_FOREST_VEGETATION,
+            register("sanguinated_forest_vegetation_bonemeal", Feature.NETHER_FOREST_VEGETATION,
                     new NetherForestVegetationFeatureConfig(SANGUINATED_FOREST_VEGETATION_PROVIDER, 3, 1));
+
+
+    public static final RegistryEntry<ConfiguredFeature<TwistingVinesFeatureConfig, ?>> CORRUPTING_VINES = register("corrupting_vines", ENFeature.CORRUPTING_VINES, new TwistingVinesFeatureConfig(8, 4, 8));
+    public static final RegistryEntry<ConfiguredFeature<TwistingVinesFeatureConfig, ?>> CORRUPTING_VINES_BONEMEAL = register("corrupting_vines_bonemeal", ENFeature.CORRUPTING_VINES, new TwistingVinesFeatureConfig(3, 1, 2));
 
 
     public static <FC extends FeatureConfig, F extends Feature<FC>> RegistryEntry register(String id, F feature, FC config) {

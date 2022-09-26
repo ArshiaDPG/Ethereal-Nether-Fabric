@@ -53,7 +53,7 @@ public class SoilNyliumBlock extends Block implements Fertilizable {
         } else if (blockState.isOf(ENBlocks.SANGUINATED_NYLIUM)) {
             ENConfiguredFeatures.SANGUINATED_FOREST_VEGETATION_BONEMEAL.value().generate(world, chunkGenerator, random, blockPos);
             if (random.nextInt(8) == 0) {
-                NetherConfiguredFeatures.TWISTING_VINES_BONEMEAL.value().generate(world, chunkGenerator, random, blockPos);
+                ENConfiguredFeatures.CORRUPTING_VINES_BONEMEAL.value().generate(world, chunkGenerator, random, blockPos);
             }
         }
     }

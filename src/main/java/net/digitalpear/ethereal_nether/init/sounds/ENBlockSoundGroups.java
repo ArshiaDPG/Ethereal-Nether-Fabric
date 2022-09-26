@@ -1,6 +1,5 @@
 package net.digitalpear.ethereal_nether.init.sounds;
 
-import net.minecraft.block.Blocks;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundEvents;
 
@@ -50,6 +49,7 @@ public class ENBlockSoundGroups {
             ENSoundEvents.SOUL_SANDSTONE_BREAK,
             ENSoundEvents.SOUL_SANDSTONE_STEP, ENSoundEvents.SOUL_SANDSTONE_BREAK,
             SoundEvents.BLOCK_STONE_HIT, SoundEvents.BLOCK_STONE_FALL);
+
 
 
 }

@@ -2,6 +2,7 @@ package net.digitalpear.ethereal_nether;
 
 import net.digitalpear.ethereal_nether.init.ENBlocks;
 import net.digitalpear.ethereal_nether.init.ENConfiguredFeatures;
+import net.digitalpear.ethereal_nether.init.ENItems;
 import net.fabricmc.api.ModInitializer;
 
 public class EtherealNether implements ModInitializer {
@@ -15,7 +16,7 @@ public class EtherealNether implements ModInitializer {
     @Override
     public void onInitialize() {
         ENBlocks.init();
+        ENItems.init();
         ENConfiguredFeatures.init();
-
     }
 }

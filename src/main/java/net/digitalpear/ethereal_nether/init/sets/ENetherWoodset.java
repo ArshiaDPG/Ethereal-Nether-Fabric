@@ -4,13 +4,16 @@ import net.digitalpear.ethereal_nether.EtherealNether;
 import net.digitalpear.ethereal_nether.common.blocks.SanguinatedWartCapBlock;
 import net.digitalpear.ethereal_nether.common.blocks.SoilNyliumBlock;
 import net.digitalpear.ethereal_nether.common.blocks.TaintedWartCapBlock;
+import net.digitalpear.ethereal_nether.common.blocks.entity.ENSignTypes;
 import net.digitalpear.ethereal_nether.init.sounds.ENBlockSoundGroups;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.tag.TagKey;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.SignType;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.registry.Registry;
 
@@ -66,7 +69,7 @@ public record ENetherWoodset(String name, MapColor topColor) {
         return createBlockWithoutItem("potted_"+ woodset.name()+ "_roots", new FlowerPotBlock(baseBlock, AbstractBlock.Settings.copy(Blocks.POTTED_WARPED_ROOTS).mapColor(woodset.topColor())));
     }
     public static Block createPottedFungus(ENetherWoodset woodset, Block baseBlock){
-        return createBlockWithoutItem("potted_"+ woodset.name()+ "_fungus", new FlowerPotBlock(baseBlock, AbstractBlock.Settings.copy(Blocks.POTTED_WARPED_ROOTS).mapColor(woodset.topColor())));
+        return createBlockWithoutItem("potted_"+ woodset.name()+ "_fungus", new FlowerPotBlock(baseBlock, AbstractBlock.Settings.copy(Blocks.POTTED_WARPED_FUNGUS).mapColor(woodset.topColor())));
     }
     public static Block createSprouts(ENetherWoodset woodset){
         return createBlockWithItem(woodset.name()+ "_sprouts", new SproutsBlock(AbstractBlock.Settings.copy(Blocks.NETHER_SPROUTS).mapColor(woodset.topColor()).sounds(ENBlockSoundGroups.SOUL_SPROUTS)), ItemGroup.DECORATIONS);
@@ -99,5 +102,14 @@ public record ENetherWoodset(String name, MapColor topColor) {
     }
     public static Block createShroomlight(ENetherWoodset woodset){
         return createBlockWithItem(woodset.name()+ "_shroomlight", new Block(AbstractBlock.Settings.copy(Blocks.SHROOMLIGHT).sounds(ENBlockSoundGroups.SOUL_SHROOMLIGHT).luminance((state) -> 10).mapColor(woodset.topColor())), ItemGroup.DECORATIONS);
+    }
+
+    public static Block createSign(ENetherWoodset woodset, SignType signType){
+        return createBlockWithoutItem(woodset.name() + "_sign", new SignBlock(AbstractBlock.Settings.copy(Blocks.ACACIA_SIGN).mapColor(woodset.topColor()).noCollision().strength(1.0f).sounds(BlockSoundGroup.WOOD), signType));
+
+    }
+    public static Block createWallSign(ENetherWoodset woodset, SignType signType){
+        return createBlockWithoutItem(woodset.name() +"_wall_sign", new WallSignBlock(AbstractBlock.Settings.copy(Blocks.ACACIA_SIGN).mapColor(woodset.topColor()).noCollision().strength(1.0f).sounds(BlockSoundGroup.WOOD), signType));
+
     }
 }
